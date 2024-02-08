@@ -1,0 +1,27 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+
+  &::after {
+    background-image: url('../assets/images/backgroundImage.jpg');
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    background-size: cover;
+  }
+  &::before {
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -9;
+    background: rgba(0, 0, 0, 0.618);
+  }
+}
