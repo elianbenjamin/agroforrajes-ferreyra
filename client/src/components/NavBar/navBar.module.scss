@@ -6,6 +6,7 @@
   width: 100%;
   border-bottom: solid var(--border-color) 1px;
   position: fixed;
+  top: 0;
   transition: background-color 0.5s, transform  0.5s;
 
   &:hover {
@@ -20,6 +21,18 @@
     // height: 40px;
     flex: 1;
     border-bottom: solid var(--border-color) 1px;
+    position: relative;
+
+    .email-icon {
+      position: absolute;
+      left: 5px;
+      height: 100%;
+    }
+
+    p {
+      opacity: 0.6;
+      transform: translateX(23px);
+    }
 
     .icons-container {
       display: flex;

@@ -1,8 +1,9 @@
 import style from './navBar.module.scss';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { InstagramIcon, LinkedinIcon } from '../../assets/Icons';
+import { InstagramIcon, LinkedinIcon, EmailIcon } from '../../assets/Icons';
 import image from '../../assets/images/300.png'
+
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,7 +22,8 @@ const NavBar = () => {
   return (
     <nav className={`${style.navBar} ${isScrolled ? style.navBar_scrolled : ''}`}>
         <div className={style["navBar-top"]}>
-          <p>✉️ agroforrajesferreyra@gmail.com</p>
+          <EmailIcon className={style['email-icon']} />
+          <p> agroforrajesferreyra<p style={{display: 'inline', fontFamily: 'Inter', opacity: '1', fontWeight: 'bolder'}}>@</p>gmail.com</p>
 
           <div className={style["icons-container"]}>
             <InstagramIcon className={style["instagram-icon"]} />
