@@ -1,9 +1,8 @@
-import style from './navBar.module.scss';
-import { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { InstagramIcon, LinkedinIcon, EmailIcon } from '../../assets/Icons';
-import image from '../../assets/images/300.png'
-
+import style from "./navBar.module.scss";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { InstagramIcon, LinkedinIcon, EmailIcon } from "../../assets/Icons";
+import image from "../../assets/images/300.png";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -11,54 +10,69 @@ const NavBar = () => {
   useEffect(() => {
     const handleScrol = () => {
       setIsScrolled(window.scrollY > 100);
-    }
-    window.addEventListener('scroll', handleScrol);
+    };
+    window.addEventListener("scroll", handleScrol);
 
     return () => {
-      removeEventListener('scroll', handleScrol);
-    }
-  })
+      removeEventListener("scroll", handleScrol);
+    };
+  });
 
   return (
-    <nav className={`${style.navBar} ${isScrolled ? style.navBar_scrolled : ''}`}>
-        <div className={style["navBar-top"]}>
-          <EmailIcon className={style['email-icon']} />
-          <p> agroforrajesferreyra<p style={{display: 'inline', fontFamily: 'Inter', opacity: '1', fontWeight: 'bolder'}}>@</p>gmail.com</p>
+    <nav
+      className={`${style.navBar} ${isScrolled ? style.navBar_scrolled : ""}`}
+    >
+      <div className={style["navBar-top"]}>
+        <EmailIcon className={style["email-icon"]} />
+        <p>
+          {" "}
+          agroforrajesferreyra<p>@</p>gmail.com
+        </p>
 
-          <div className={style["icons-container"]}>
-            <InstagramIcon className={style["instagram-icon"]}  />
+        <div className={style["icons-container"]}>
+          <a style={{border: 'solid blue 1px', position: 'relative'}}
+            href="https://www.instagram.com/agroforrajesferreyra/"
+            target="_blank"
+          >
+            <InstagramIcon className={style["instagram-icon"]} />
+          </a>
+          <a style={{border: 'solid red 1px'}}
+            href="https://www.linkedin.com/in/agroforrajes-ferreyra/"
+            target="_blank"
+          >
             <LinkedinIcon className={style["linkedin-icon"]} />
-          </div>
+          </a>
+        </div>
+      </div>
+
+      <div className={style["navBar-bottom"]}>
+        <img src={image} className={style.image} />
+
+        <div className={style["title-container"]}>
+          <h1>AGROFORRAJES FERREYRA S.R.L</h1>
+          <p>PICADO DE FORRAJES</p>
         </div>
 
-        <div className={style["navBar-bottom"]}>
-          <img src={image} className={style.image} />
-
-          <div className={style["title-container"]}>
-            <h1>AGROFORRAJES FERREYRA S.R.L</h1>
-            <p>PICADO DE FORRAJES</p>
-          </div>
-
-          <div className={style["buttons-container"]}>
-            <NavLink to={'/'} className={style.button}>
-              INICIO <div className={style["button-line"]}></div>{" "}
-            </NavLink>
-            <NavLink to={'/service'} className={style.button}>
-              SERVICIOS <div className={style["button-line"]}></div>
-            </NavLink>
-            <NavLink to={'/about'} className={style.button}>
-              HISTORIA <div className={style["button-line"]}></div>
-            </NavLink>
-            <NavLink to={'/gallery'} className={style.button}>
-              GALERIA <div className={style["button-line"]}></div>
-            </NavLink>
-            <NavLink to={'/contact'} className={style.button}>
-              CONTACTANOS <div className={style["button-line"]}></div>
-            </NavLink>
-          </div>
+        <div className={style["buttons-container"]}>
+          <NavLink to={"/"} className={style.button}>
+            INICIO <div className={style["button-line"]}></div>{" "}
+          </NavLink>
+          <NavLink to={"/service"} className={style.button}>
+            SERVICIOS <div className={style["button-line"]}></div>
+          </NavLink>
+          <NavLink to={"/about"} className={style.button}>
+            HISTORIA <div className={style["button-line"]}></div>
+          </NavLink>
+          <NavLink to={"/gallery"} className={style.button}>
+            GALERIA <div className={style["button-line"]}></div>
+          </NavLink>
+          <NavLink to={"/contact"} className={style.button}>
+            CONTACTANOS <div className={style["button-line"]}></div>
+          </NavLink>
         </div>
-      </nav>
-  )
-}
+      </div>
+    </nav>
+  );
+};
 
 export default NavBar;

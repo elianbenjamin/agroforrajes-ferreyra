@@ -1,4 +1,3 @@
-
 .navBar {
   display: flex;
   flex-direction: column;
@@ -7,7 +6,7 @@
   border-bottom: solid var(--border-color) 1px;
   position: fixed;
   top: 0;
-  transition: background-color 0.5s, transform  0.5s;
+  transition: background-color 0.5s, transform 0.5s;
 
   &:hover {
     background-color: #3a281cb3;
@@ -32,6 +31,12 @@
     p {
       opacity: 0.6;
       transform: translateX(23px);
+      p {
+        display: inline;
+        font-family: Inter;
+        opacity: 1;
+        font-weight: "bolder";
+      }
     }
 
     .icons-container {
