@@ -8,7 +8,7 @@ export type ServiceProps = {
 
 const Service: React.FC<ServiceProps>  = ({}) => {
 	return (
-		<div className={styles.service}>
+		<div className={styles.Service} id='service'>
  			Service works!
  		</div>
 	);

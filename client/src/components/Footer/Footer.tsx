@@ -1,17 +1,7 @@
-"use client";
-import React from 'react';
-import styles from './footer.module.scss';
+import styles from "./footer.module.scss";
 
-export type FooterProps = {
-	// types...
-}
-
-const Footer: React.FC<FooterProps>  = ({}) => {
-	return (
-		<div className={styles.footer}>
- 			Footer works!
- 		</div>
-	);
+const Footer = () => {
+  return <div className={styles.Footer}>Footer works!</div>;
 };
 
 export default Footer;

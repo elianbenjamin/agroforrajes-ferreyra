@@ -1,9 +1,20 @@
 import style from "./home.module.scss";
 import { WhatsappIconGreen, ArrowDown } from "../../assets/Icons";
+import { scroller } from "react-scroll";
+
 
 const Home = () => {
+  const handlePageScroll = () => {
+    scroller.scrollTo('service', {
+      duration: 1300,
+      delay: 0,
+      smooth: 'easeInOutQuart'
+    })
+  }
+  
+
   return (
-    <div className={style.Home}>
+    <div className={style.Home} id="home">
       <div className={style["title-container"]}>
         <h2>- Desde 2006 -</h2>
         <hr />
@@ -20,7 +31,7 @@ const Home = () => {
         <WhatsappIconGreen className={style.icon} />
       </a>
 
-      <a className={style['arrow-container']}>
+      <a className={style['arrow-container']} onClick={handlePageScroll}>
         <ArrowDown className={style.icon} />
       </a>
     </div>
