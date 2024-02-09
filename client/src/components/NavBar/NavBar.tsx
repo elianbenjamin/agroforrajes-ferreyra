@@ -26,7 +26,7 @@ const NavBar = () => {
           <p> agroforrajesferreyra<p style={{display: 'inline', fontFamily: 'Inter', opacity: '1', fontWeight: 'bolder'}}>@</p>gmail.com</p>
 
           <div className={style["icons-container"]}>
-            <InstagramIcon className={style["instagram-icon"]} />
+            <InstagramIcon className={style["instagram-icon"]}  />
             <LinkedinIcon className={style["linkedin-icon"]} />
           </div>
         </div>
