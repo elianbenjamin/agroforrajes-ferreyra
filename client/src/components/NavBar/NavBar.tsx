@@ -40,19 +40,19 @@ const NavBar = () => {
           </div>
 
           <div className={style["buttons-container"]}>
-            <NavLink className={style.button}>
+            <NavLink to={'/'} className={style.button}>
               INICIO <div className={style["button-line"]}></div>{" "}
             </NavLink>
-            <NavLink className={style.button}>
+            <NavLink to={'/service'} className={style.button}>
               SERVICIOS <div className={style["button-line"]}></div>
             </NavLink>
-            <NavLink className={style.button}>
+            <NavLink to={'/about'} className={style.button}>
               HISTORIA <div className={style["button-line"]}></div>
             </NavLink>
-            <NavLink className={style.button}>
+            <NavLink to={'/gallery'} className={style.button}>
               GALERIA <div className={style["button-line"]}></div>
             </NavLink>
-            <NavLink className={style.button}>
+            <NavLink to={'/contact'} className={style.button}>
               CONTACTANOS <div className={style["button-line"]}></div>
             </NavLink>
           </div>
