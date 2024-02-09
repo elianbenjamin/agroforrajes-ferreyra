@@ -22,7 +22,7 @@ export function LinkedinIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export function ArrowDown (props: SVGProps<SVGSVGElement>) {
+export function ArrowDown(props: SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <path
@@ -102,6 +102,32 @@ export function WhatsappIconDark(props: SVGProps<SVGSVGElement>) {
 
 export function EmailIcon(props: SVGProps<SVGSVGElement>) {
   return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+      <path
+        fill="currentColor"
+        d="M4.615 19q-.69 0-1.152-.462Q3 18.075 3 17.385V6.615q0-.69.463-1.152Q3.925 5 4.615 5h14.77q.69 0 1.152.463q.463.462.463 1.152v10.77q0 .69-.462 1.152q-.463.463-1.153.463zM12 12.115l-8-5.23v10.5q0 .269.173.442t.442.173h14.77q.269 0 .442-.173t.173-.442v-10.5zM12 11l7.692-5H4.308zM4 6.885V6v11.385q0 .269.173.442t.442.173H4z"
+      />
+    </svg>
+  );
+}
+
+export function Seed(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M12 10a6 6 0 0 0-6-6H3v2a6 6 0 0 0 6 6h3m0 2a6 6 0 0 1 6-6h3v1a6 6 0 0 1-6 6h-3m0 5V10"
+      />
+    </svg>
+  );
+}
+
+export function Corn(props: SVGProps<SVGSVGElement>) {
+  return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -109,7 +135,7 @@ export function EmailIcon(props: SVGProps<SVGSVGElement>) {
     >
       <path
         fill="currentColor"
-        d="M4.615 19q-.69 0-1.152-.462Q3 18.075 3 17.385V6.615q0-.69.463-1.152Q3.925 5 4.615 5h14.77q.69 0 1.152.463q.463.462.463 1.152v10.77q0 .69-.462 1.152q-.463.463-1.153.463zM12 12.115l-8-5.23v10.5q0 .269.173.442t.442.173h14.77q.269 0 .442-.173t.173-.442v-10.5zM12 11l7.692-5H4.308zM4 6.885V6v11.385q0 .269.173.442t.442.173H4z"
+        d="M11 12H8.82c.8.5 1.53 1.07 2.18 1.68zm-4-1c.27-5.12 2.37-9 5-9c2.66 0 4.77 3.94 5 9.12c1.5-.69 3.17-1.12 5-1.12c-5.75 2.57-3.75 12-10 12c-6 0-4.07-9.43-10-12c1.82 0 3.5.4 5 1m4 0V9H8.24l-.21 2zm0-3V6H9.05c-.25.6-.45 1.27-.62 2zm0-3V3.3c-.55.33-1.05.92-1.5 1.7zm1-2v2h1v1h-1v2h2v1h-2v2h3v1h-3v2h2v1h-1.77c1.19 1.45 1.92 3 2.09 4.23c.99-1.67 1.64-4.39 1.68-7.47C15.94 7 14.13 3 12 3"
       />
     </svg>
   );
