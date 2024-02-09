@@ -30,13 +30,15 @@ const NavBar = () => {
         </p>
 
         <div className={style["icons-container"]}>
-          <a style={{border: 'solid blue 1px', position: 'relative'}}
+          <a 
+            className={style['instagram-icon-container']}
             href="https://www.instagram.com/agroforrajesferreyra/"
             target="_blank"
           >
             <InstagramIcon className={style["instagram-icon"]} />
           </a>
-          <a style={{border: 'solid red 1px'}}
+          <a
+            className={style['linkedin-icon-container']}
             href="https://www.linkedin.com/in/agroforrajes-ferreyra/"
             target="_blank"
           >
