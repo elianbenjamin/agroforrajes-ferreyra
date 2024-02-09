@@ -1,9 +1,9 @@
 import style from "./home.module.scss";
+import { WhatsappIconGreen } from "../../assets/Icons";
 
 const Home = () => {
   return (
     <div className={style.Home}>
-
 
       <div className={style['title-container']}>
         <h2>- Desde 2006 -</h2>
@@ -12,6 +12,8 @@ const Home = () => {
         <hr />
         <h2>Calidad Asegurada</h2>
       </div>
+
+      <WhatsappIconGreen className={style['whatsapp-icon']} />
     </div>
   );
 };

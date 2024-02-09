@@ -5,6 +5,28 @@
   height: 100%;
   width: 100%;
 
+  &::after {
+    background-image: url('../../assets/images/backgroundImage.jpg');
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    background-size: cover;
+  }
+  &::before {
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -9;
+    background: rgba(0, 0, 0, 0.618);
+  }
+
   .title-container {
     display: flex;
     align-items: center;
@@ -19,8 +41,14 @@
     }
 
     hr {
-      width: 100%
+      width: 100%;
     }
   }
 }
 
+.whatsapp-icon {
+  position: absolute;
+  height: 50px;
+  bottom: 5%;
+  right: 3%;
+}
