@@ -1,40 +1,38 @@
-"use client";
-import React from "react";
 import styles from "./Service.module.scss";
+import { Seed, Corn } from "../../assets/Icons";
 
-export type ServiceProps = {
-  // types...
-};
-
-const Service: React.FC<ServiceProps> = ({}) => {
+const Service = () => {
   return (
     <div className={styles.Service} id="service">
-      <div className={styles["titulo-container"]}>
-        <h1 className={styles.titulo}>Nuestros Servicios</h1>
-      </div>
+      <h1 className={styles.title}>Nuestros Servicios</h1>
 
-      <div className={styles["container-servicios"]}>
-        <div className={styles["container-picado"]}>
-          <h2 className={styles.picado}>
-            Picado de FORRAJES <br />
-            <p className={styles["text-picado"]}>
-              Especialización en la confección de comida de calidad para tambos
-              y feedlots. Ensilado de maíz, sorgo, cereales de invierno y
-              forrajes de primavera, en silo bolsa, banker, torta y autconsumo
-            </p>
-          </h2>
+      <div className={styles["services-container"]}>
+        <div className={styles["service"]}>
+          <div className={styles["service-title"]}>
+            <Corn />
+            <h2>Picado de FORRAJES</h2>
+          </div>
+
+          <p className={styles["service-text"]}>
+            Es un proceso fundamental que utiliza maquinaria especializada para
+            fragmentar y mejorar la utilidad de los materiales fibrosos,
+            contribuyendo a la alimentación eficiente y saludable del ganado en
+            la agricultura contemporánea.
+          </p>
         </div>
 
-        <div className={styles["container-siembra"]}>
-          <h2 className={styles.siembra}>
-            Siembra de PRECISION <br />
-            <p className={styles["text-siembra"]}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Molestiae consequatur eius ipsa qui reprehenderit ipsum, fuga id
-              illo repellendus consectetur doloremque mollitia obcaecati!
-              Tenetur voluptas quae molestias suscipit modi tempore.
-            </p>
-          </h2>
+        <div className={styles["service"]}>
+          <div className={styles["service-title"]}>
+            <Seed />
+            <h2>Siembra de PRECISION</h2>
+          </div>
+
+          <p className={styles["service-text"]}>
+            La siembra de precisión de grano grueso utiliza tecnologías
+            avanzadas para personalizar y optimizar el proceso de siembra,
+            mejorando la eficiencia y maximizando el rendimiento de los cultivos
+            de grano grueso en la agricultura moderna.
+          </p>
         </div>
       </div>
     </div>

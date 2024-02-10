@@ -1,71 +1,87 @@
+@import "../../style/mixin.scss";
+
 .Service {
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
- 
-}
-.titulo-container {
+  justify-content: center;
   position: relative;
-  top: 20%;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.379);
+  gap: 60px;
 
-  .titulo {
+  &::after {
+    content: "";
+    background-image: url("../../assets/images/Picadora-Claas.jpeg");
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+  &::before {
+    @include background-opacity();
+    z-index: -9;
+  }
+
+  .title {
     font-weight: 700;
     font-size: 40px;
+    border-bottom: var(--border);
   }
-}
 
+  .services-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50%;
+    width: 80%;
 
-.container-servicios {
-  display: flex;
-  align-items: center;
-  position: relative;
-  justify-content: space-between;
-  top: 25%;
-  border: 2px solid red;
-  height: 50%;
-  width: 80%;
-  
-  
-  
-  .container-picado {
-    border: 2px solid blue;
-    border-radius: 100px;
-    width: 40%;
-    height: 100%;
-   
+    .service {
+      border-radius: 100px;
+      width: 40%;
+      border: var(--border);
+      border-right: solid rgba(255, 255, 255, 0.2) 1px;
+      border-bottom: solid rgba(255, 255, 255, 0.2) 1px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 40px;
+      height: 380px;
+      gap: 20px;
+      cursor: pointer;
+      user-select: none;
+      @include brown-blur;
+      transition: transform 0.5s, background-color 0.5s;
 
-    .picado {
-      margin: 10px;
-      font-weight: 500;
-      text-align: center;
-      
-    }
-    .text-picado {
-      font-weight: 200;
-      margin-top: 15px;
-      text-align: justify;
-      
-    }
-  }
-  .container-siembra {
-    border: 2px solid yellow;
-    border-radius: 100px;
-    width: 40%;
-    height: 100%;
-  
-    .siembra {
-      margin: 10px;
-      font-weight: 500;
-      text-align: center;
-    }
-    .text-siembra{
-      font-weight: 200;
-      margin-top: 15px;
-      text-align: justify;
+      &:hover {
+        transform: scale(1.02);
+      }
+    
+
+      .service-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        h2 {
+          font-weight: 500;
+          font-size: 2em;
+          text-align: center;
+        }
+
+        svg {
+          height: 50px;
+        }
+      }
+      .service-text {
+        font-weight: 200;
+        text-align: justify;
+        font-size: 1.2em;
+      }
     }
   }
 }

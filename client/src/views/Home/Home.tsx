@@ -28,11 +28,11 @@ const Home = () => {
         href="https://wa.me/3329561698"
         target="_blank"
       >
-        <WhatsappIconGreen className={style.icon} />
+        <WhatsappIconGreen/>
       </a>
 
       <a className={style['arrow-container']} onClick={handlePageScroll}>
-        <ArrowDown className={style.icon} />
+        <ArrowDown/>
       </a>
     </div>
   );

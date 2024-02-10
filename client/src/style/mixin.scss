@@ -1,0 +1,21 @@
+@mixin background-opacity() {
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.618);
+}
+
+@mixin brown-blur () {
+  background-color: rgba(127, 76, 43, 0.134);
+  backdrop-filter: blur(5px);
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: #3a281cb3;
+  }
+}
+
+

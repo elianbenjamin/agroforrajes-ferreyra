@@ -1,7 +1,10 @@
 @import './fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 
 :root {
-  font-family: 'Uni Neue', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Cabin' ,Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   line-height: 1.5;
 
   color-scheme: light dark;
@@ -13,7 +16,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --border-color: #dddddd81;
+  --border: solid rgba(255, 255, 255, 0.3) 1px;
 }
 
 * {
