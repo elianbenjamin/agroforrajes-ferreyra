@@ -1,5 +1,71 @@
 .Service {
   height: 100vh;
   width: 100vw;
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+ 
+}
+.titulo-container {
+  position: relative;
+  top: 20%;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.379);
+
+  .titulo {
+    font-weight: 700;
+    font-size: 40px;
+  }
+}
+
+
+.container-servicios {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  top: 25%;
+  border: 2px solid red;
+  height: 50%;
+  width: 80%;
+  
+  
+  
+  .container-picado {
+    border: 2px solid blue;
+    border-radius: 100px;
+    width: 40%;
+    height: 100%;
+   
+
+    .picado {
+      margin: 10px;
+      font-weight: 500;
+      text-align: center;
+      
+    }
+    .text-picado {
+      font-weight: 200;
+      margin-top: 15px;
+      text-align: justify;
+      
+    }
+  }
+  .container-siembra {
+    border: 2px solid yellow;
+    border-radius: 100px;
+    width: 40%;
+    height: 100%;
+  
+    .siembra {
+      margin: 10px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .text-siembra{
+      font-weight: 200;
+      margin-top: 15px;
+      text-align: justify;
+    }
+  }
 }
