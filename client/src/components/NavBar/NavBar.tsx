@@ -3,9 +3,21 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { InstagramIcon, LinkedinIcon, EmailIcon } from "../../assets/Icons";
 import image from "../../assets/images/300.png";
+import { scroller } from "react-scroll";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const handleServiceScroll = (target: string) => {
+    const id: string = target;
+   
+    setTimeout(() => {
+      scroller.scrollTo(id, {
+        duration: 1300,
+        delay: 0,
+        smooth: 'easeInOutQuart'
+      })
+    }, 0)
+  }
 
   useEffect(() => {
     const handleScrol = () => {
@@ -56,10 +68,10 @@ const NavBar = () => {
         </div>
 
         <div className={style["buttons-container"]}>
-          <NavLink to={"/"} className={style.button}>
-            INICIO <div className={style["button-line"]}></div>{" "}
+          <NavLink to={"/"} className={style.button} onClick={() => {handleServiceScroll('home')}}>
+            INICIO <div className={style["button-line"]}></div>
           </NavLink>
-          <NavLink to={"/service"} className={style.button}>
+          <NavLink to={"/"} className={style.button} onClick={() => {handleServiceScroll('service')}}>
             SERVICIOS <div className={style["button-line"]}></div>
           </NavLink>
           <NavLink to={"/about"} className={style.button}>

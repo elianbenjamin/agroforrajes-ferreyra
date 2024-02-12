@@ -13,6 +13,7 @@
   &::after {
     content: "";
     background-image: url("../../assets/images/Picadora-Claas.jpeg");
+    background-size: cover;
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -54,11 +55,18 @@
       user-select: none;
       @include brown-blur;
       transition: transform 0.5s, background-color 0.5s;
+      position: relative;
 
       &:hover {
         transform: scale(1.02);
       }
-    
+      &:hover::after {
+        content: 'Click para saber mas';
+        position: absolute;
+        bottom: 6px;
+        text-align: center;
+        text-shadow: 2px 2px 4px #333;
+      }
 
       .service-title {
         display: flex;
@@ -82,6 +90,7 @@
         text-align: justify;
         font-size: 1.2em;
       }
+      
     }
   }
 }
