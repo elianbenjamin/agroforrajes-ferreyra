@@ -32,6 +32,7 @@
     transition: opacity 1s;
     max-width: 100%;
     width: 100%;
+    filter: blur(3px);
   }
   .img_on {
     opacity: 1;

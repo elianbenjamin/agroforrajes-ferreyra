@@ -7,8 +7,36 @@
 }
 
 .container1 {
-  border: solid black 1px;
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+
+  a {
+    max-width: 90%;
+    display: grid;
+    place-items: center;
+
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+    }
+  }
+
+  p {
+    height: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.3em;
+
+    svg {
+      height: 100%;
+    }
+  }
 } 
 .container2 {
   padding-top: 4%;
@@ -56,7 +84,6 @@
   }
 }
 .container3 {
-  border: solid black 1px;
   flex: 1;
   display: flex;
   justify-content: center;
