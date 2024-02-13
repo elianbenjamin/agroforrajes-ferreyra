@@ -1,3 +1,5 @@
+@import '../../style/mixin.scss';
+
 .carousel {
   position: absolute;
   top: 0;
@@ -8,10 +10,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  background-color: var(--hover-color);
+  overflow: hidden;
+  
+  &::after {
+    @include background-opacity();
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -5;
+  }
+  
   img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -9;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 1s;
     max-width: 100%;
     width: 100%;
   }

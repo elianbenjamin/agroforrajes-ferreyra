@@ -31,13 +31,13 @@ const Carousel = () => {
     setTimeout(() => {
       selectNewImage(images);
       setOn(true);
-    }, 500);
+    }, 1000);
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       next();
-    }, 3000);
+    }, 7000);
 
     return () => {
       clearInterval(interval);
