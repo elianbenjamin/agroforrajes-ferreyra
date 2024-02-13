@@ -1,5 +1,5 @@
 import styles from "./Service.module.scss";
-import { Seed, Corn } from "../../assets/Icons";
+import { SeedIcon, CornIcon } from "../../assets/Icons";
 
 const Service = () => {
 
@@ -12,7 +12,7 @@ const Service = () => {
       <div className={styles["services-container"]}>
         <div className={styles["service"]}>
           <div className={styles["service-title"]}>
-            <Corn />
+            <CornIcon />
             <h2>Picado de FORRAJES</h2>
           </div>
 
@@ -27,7 +27,7 @@ const Service = () => {
 
         <div className={styles["service"]}>
           <div className={styles["service-title"]}>
-            <Seed />
+            <SeedIcon />
             <h2>Siembra de PRECISION</h2>
           </div>
 
