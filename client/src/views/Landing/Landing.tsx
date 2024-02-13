@@ -1,7 +1,7 @@
 import style from "./landing.module.scss";
 import { Footer } from "../../components/Footer";
-import Home from "../Home/Home";
-import { Service } from "../Service";
+import Home from "../../components/Home/Home";
+import { Service } from "../../components/Service";
 
 const Landing = () => {
   return (

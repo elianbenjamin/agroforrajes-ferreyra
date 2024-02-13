@@ -1,3 +1,22 @@
 .carousel {
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    opacity: 0;
+    transition: opacity 0.5s;
+    max-width: 100%;
+    width: 100%;
+  }
+  .img_on {
+    opacity: 1;
+  }
 }
+

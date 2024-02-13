@@ -1,6 +1,7 @@
 import style from "./home.module.scss";
 import { WhatsappIconGreen, ArrowDown } from "../../assets/Icons";
 import { scroller } from "react-scroll";
+import { Carousel } from "../Carousel";
 
 
 const Home = () => {
@@ -15,6 +16,8 @@ const Home = () => {
 
   return (
     <div className={style.Home} id="home">
+      <Carousel />
+
       <div className={style["title-container"]}>
         <h2>- Desde 2006 -</h2>
         <hr />
