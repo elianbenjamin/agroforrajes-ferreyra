@@ -12,12 +12,14 @@ import { scroller } from "react-scroll";
 
 function App() {
   useEffect(() => {
-    console.log('hola')
-    scroller.scrollTo('home', {
-      duration: 400,
-      delay: 0,
-      smooth: 'easeInOutQuart'
-    })
+    setTimeout(()=>{
+      scroller.scrollTo('home', {
+        duration: 400,
+        delay: 0,
+        smooth: 'easeInOutQuart'
+      })
+
+    },1000)
   }, [])
 
   return (
