@@ -1,6 +1,5 @@
 import style from "./navBar.module.scss";
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import { InstagramIcon, LinkedinIcon, EmailIcon } from "../../assets/Icons";
 import image from "../../assets/images/300.png";
 import { scroller } from "react-scroll";
@@ -68,21 +67,21 @@ const NavBar = () => {
         </div>
 
         <div className={style["buttons-container"]}>
-          <NavLink to={"/"} className={style.button} onClick={() => {handleServiceScroll('home')}}>
+          <div className={style.button} onClick={() => {handleServiceScroll('home')}}>
             INICIO <div className={style["button-line"]}></div>
-          </NavLink>
-          <NavLink to={"/"} className={style.button} onClick={() => {handleServiceScroll('service')}}>
+          </div>
+          <div className={style.button} onClick={() => {handleServiceScroll('service')}}>
             SERVICIOS <div className={style["button-line"]}></div>
-          </NavLink>
-          <NavLink to={"/about"} className={style.button}>
+          </div>
+          <div className={style.button} onClick={() => {handleServiceScroll('about')}}>
             HISTORIA <div className={style["button-line"]}></div>
-          </NavLink>
-          <NavLink to={"/gallery"} className={style.button}>
+          </div>
+          <div className={style.button} onClick={() => {handleServiceScroll('gallery')}}>
             GALERIA <div className={style["button-line"]}></div>
-          </NavLink>
-          <NavLink to={"/contact"} className={style.button}>
+          </div>
+          <div className={style.button} onClick={() => {handleServiceScroll('contact')}}>
             CONTACTANOS <div className={style["button-line"]}></div>
-          </NavLink>
+          </div>
         </div>
       </div>
     </nav>

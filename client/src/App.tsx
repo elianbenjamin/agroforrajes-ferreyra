@@ -5,7 +5,7 @@ import { Footer } from "./components/Footer";
 import Service from "./views/Service/Service"; */
 import { Route, Routes } from "react-router-dom";
 import Landing from "./views/Landing/Landing";
-import { About } from "./views/About";
+import { About } from "./components/About";
 import { useEffect } from "react";
 import { scroller } from "react-scroll";
 

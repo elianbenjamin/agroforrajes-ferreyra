@@ -5,21 +5,22 @@ import {
   MessageIcon,
   WhatsappIconDark,
 } from "../../assets/Icons";
-import googleMapsScreenshot from "../../assets/images/googleMaps-screenshot.png";
 import { LocationIcon } from "../../assets/Icons";
-
 
 const Footer = () => {
   return (
-    <div className={styles.Footer}>
+    <div className={styles.Footer} id="contact">
       <section className={styles.container1}>
         <p>
           <LocationIcon />
           Justo Daract, San Luis.
         </p>
-        <a href={"https://maps.app.goo.gl/aKBcVWJVtjAncqq59"} target="_blank">
-          <img src={googleMapsScreenshot} />
-        </a>
+        <iframe
+          style={{boxShadow: '0px 0px 25px black', borderRadius: '5px', border: 'none'}}
+          width="350"
+          height="300"
+          src="https://maps.google.com/maps?width=350&amp;height=300&amp;hl=en&amp;q=%20+(-33.844632,%20-65.172274)&amp;t=h&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+        ></iframe>
       </section>
 
       <section className={styles.container2}>

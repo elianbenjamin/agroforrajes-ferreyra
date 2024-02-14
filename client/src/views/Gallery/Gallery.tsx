@@ -1,17 +1,11 @@
-"use client";
-import React from 'react';
-import styles from './Gallery.module.scss';
+import styles from "./Gallery.module.scss";
 
-export type GalleryProps = {
-	// types...
-}
-
-const Gallery: React.FC<GalleryProps>  = ({}) => {
-	return (
-		<div className={styles.gallery}>
- 			Gallery works!
- 		</div>
-	);
+const Gallery = () => {
+  return (
+    <div className={styles.gallery} id='gallery'>
+      <h1>Galeria</h1>
+    </div>
+  );
 };
 
 export default Gallery;
