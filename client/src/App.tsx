@@ -1,33 +1,30 @@
 import "./style/App.scss";
 import NavBar from "./components/NavBar/NavBar";
-/* import Home from "./components/Home/Home";
-import { Footer } from "./components/Footer";
-import Service from "./views/Service/Service"; */
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Landing from "./views/Landing/Landing";
-import { About } from "./components/About";
 import { useEffect } from "react";
 import { scroller } from "react-scroll";
-
+import { ErrorPage } from "./components/ErrorPage";
 
 function App() {
+  const { pathname } = useLocation();
+
   useEffect(() => {
-    setTimeout(()=>{
-      scroller.scrollTo('home', {
+    setTimeout(() => {
+      scroller.scrollTo("home", {
         duration: 400,
         delay: 0,
-        smooth: 'easeInOutQuart'
-      })
-
-    },1000)
-  }, [])
+        smooth: "easeInOutQuart",
+      });
+    }, 1000);
+  }, []);
 
   return (
     <div className="App">
-      <NavBar />
+      {pathname === "/" && <NavBar />}
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/about" element={<About />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
   );
