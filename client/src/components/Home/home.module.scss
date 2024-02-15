@@ -14,7 +14,6 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-
     font-size: 1.4em;
 
     h2 {
@@ -54,10 +53,6 @@
   justify-content: center;
   align-items: center;
   @include brown-blur ();
-
-  &:hover {
-
-  }
 
   svg {
     height: 100%;
