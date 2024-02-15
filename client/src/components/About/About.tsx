@@ -1,6 +1,18 @@
+import { useState } from "react";
 import styles from "./about.module.scss";
+import Equipment from "../Equipment/Equipment";
+import {
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+} from "../../assets/gallery-images/export";
 
 const About = () => {
+  const [openModal, setOpenModal] = useState<boolean>(false);
+
   return (
     <div className={styles.About} id="about">
       <section className={styles["left-container"]}>
@@ -16,14 +28,37 @@ const About = () => {
           expandimos nuestras operaciones y la capacidad de picado para
           satisfacer las necesidades del mercado.
         </p>
+
+        <div
+          className={styles["flota-button"]}
+          onClick={() => {
+            setOpenModal(!openModal);
+          }}
+        >
+          Nuestra flota
+        </div>
+
+        {openModal ? <Equipment /> : null}
       </section>
       <section className={styles["right-container"]}>
-        <div>foto 1</div>
-        <div>foto 2</div>
-        <div>foto 3</div>
-        <div>foto 4</div>
-        <div>foto 5</div>
-        <div>foto 6</div>
+        <div>
+          <img src={image1} />
+        </div>
+        <div>
+          <img src={image2} />
+        </div>
+        <div>
+          <img src={image3} />
+        </div>
+        <div>
+          <img src={image4} />
+        </div>
+        <div>
+          <img src={image5} />
+        </div>
+        <div>
+          <img src={image6} />
+        </div>
       </section>
     </div>
   );

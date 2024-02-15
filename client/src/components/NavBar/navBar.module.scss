@@ -126,16 +126,18 @@
         user-select: none;
         cursor: pointer;
 
-        .button-line {
+        &::after {
+          content: '';
           position: absolute;
           bottom: 0;
           transform: translateX(-101%);
-          border: solid #a66400 1px;
+          background-color: #a66400;
+          height: 2px;
           transition: transform 0.5s;
           width: 100%;
         }
 
-        &:hover .button-line {
+        &:hover::after {
           transform: translateX(0);
         }
       }

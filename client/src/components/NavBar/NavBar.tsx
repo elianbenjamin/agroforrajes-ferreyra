@@ -68,19 +68,19 @@ const NavBar = () => {
 
         <div className={style["buttons-container"]}>
           <div className={style.button} onClick={() => {handleServiceScroll('home')}}>
-            INICIO <div className={style["button-line"]}></div>
+            INICIO
           </div>
           <div className={style.button} onClick={() => {handleServiceScroll('service')}}>
-            SERVICIOS <div className={style["button-line"]}></div>
+            SERVICIOS
           </div>
           <div className={style.button} onClick={() => {handleServiceScroll('about')}}>
-            HISTORIA <div className={style["button-line"]}></div>
+            HISTORIA
           </div>
           <div className={style.button} onClick={() => {handleServiceScroll('gallery')}}>
-            GALERIA <div className={style["button-line"]}></div>
+            GALERIA
           </div>
           <div className={style.button} onClick={() => {handleServiceScroll('contact')}}>
-            CONTACTANOS <div className={style["button-line"]}></div>
+            CONTACTANOS
           </div>
         </div>
       </div>
