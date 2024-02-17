@@ -12,6 +12,7 @@ const Home = () => {
       smooth: 'easeInOutQuart'
     })
   }
+  const whatsappMessage = encodeURIComponent("¡Hola! Estoy interesado en obtener más información sobre los servicios de picado de forraje y siembra que ofrecen. ¿Podrían proporcionarme detalles adicionales y posiblemente programar una consulta? Gracias.");
   
 
   return (
@@ -24,11 +25,11 @@ const Home = () => {
         <h1>AGROFORRAJES FERREYRA </h1>
         <hr />
         <h2>Calidad Asegurada</h2>
-      </div>
+      </div> 
 
       <a
         className={style["whatsapp-container"]}
-        href="https://wa.me/3329561698"
+        href={`https://wa.me/3329561698?text=${whatsappMessage}`}
         target="_blank"
       >
         <WhatsappIconGreen/>
