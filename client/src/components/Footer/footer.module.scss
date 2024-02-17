@@ -1,9 +1,21 @@
 .Footer {
   height: 100vh;
   width: 100vw;
-  background-color: #582f0e;
+  //background-color: #582f0e65;
   padding: 60px;
   display: flex;
+  position: relative;
+  
+  &::after {
+    content: '';
+    background: linear-gradient(0.9turn, #000000, #844000);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+  }
 }
 
 .container1 {
@@ -83,6 +95,7 @@
     }
   }
 }
+
 .container3 {
   flex: 1;
   display: flex;
