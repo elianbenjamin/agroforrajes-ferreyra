@@ -59,7 +59,7 @@
         transform: scale(1.02);
       }
       &:hover::after {
-        content: 'Click para saber mas';
+        content: "Click para saber mas";
         position: absolute;
         bottom: 6px;
         text-align: center;
@@ -88,7 +88,105 @@
         text-align: justify;
         font-size: 1.2em;
       }
-      
+    }
+  }
+}
+@media screen and (max-width: 1326px) {
+  .Service {
+    .services-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+      .service {
+        height: 400px;
+        width: 450px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Service {
+    .services-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+      .service {
+        height: 400px;
+        width: 450px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 960px) {
+  .Service {
+    gap: 0px;
+    .services-container {
+      transform: translateY(8%);
+      width: 100%;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .service {
+        height: 280px;
+        width: 800px;
+        padding: 0px 60px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .title {
+      font-weight: 700;
+      font-size: 35px;
+      border-bottom: var(--border);
+    }
+  }
+}
+@media screen and (max-width: 760px) {
+  .Service {
+    .services-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .service {
+        height: 280px;
+        width: 380px;
+        display: flex;
+        justify-content: center;
+
+        .service-text {
+          margin-bottom: 18%;
+          padding: 10px 5px;
+          width: 350px;
+          font-size: 15px;
+          display: flex;
+          justify-content: center;
+        }
+        .service-title {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          h2 {
+            width: 400px;
+            font-size: 25px;
+          }
+
+          svg {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    .title {
+      font-weight: 700;
+      font-size: 26px;
+      border-bottom: var(--border);
     }
   }
 }

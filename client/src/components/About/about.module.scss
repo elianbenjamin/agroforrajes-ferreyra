@@ -95,3 +95,37 @@
     }
   }
 }
+
+@media screen and (max-width: 1326px) {
+  .About {
+    .left-container {
+      h1 {
+        border: solid yellow;
+      }
+      p {
+        border: solid grey;
+      }
+    }
+    .right-container {
+      border: solid blue;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .About {
+    flex-direction: column;
+    padding: 20px;
+    .left-container {
+      max-width: 100%;
+    }
+
+    .right-container {
+      margin-top: 30px;
+      div {
+        min-width: 100%;
+      
+      }
+    }
+  }
+}
