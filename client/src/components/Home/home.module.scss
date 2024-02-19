@@ -8,7 +8,6 @@
   width: 100vw;
   position: relative;
 
-
   .title-container {
     display: flex;
     align-items: center;
@@ -16,9 +15,10 @@
     justify-content: center;
     text-align: center;
     font-size: 1.4em;
+    margin: 0 15px;
 
     h2 {
-      font-weight: 400;
+
     }
 
     hr {
@@ -65,7 +65,7 @@
   .Home {
 
     .title-container {
-      width: 90%;
+      font-size: 1em
     }
   }
 }
