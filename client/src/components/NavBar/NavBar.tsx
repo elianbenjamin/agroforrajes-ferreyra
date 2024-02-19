@@ -1,11 +1,19 @@
 import style from "./navBar.module.scss";
 import { useEffect, useState } from "react";
-import { InstagramIcon, LinkedinIcon, EmailIcon } from "../../assets/Icons";
+import {
+  InstagramIcon,
+  LinkedinIcon,
+  EmailIcon,
+  CloseIcon,
+  SandwichMenuIcon,
+} from "../../assets/Icons";
 import image from "../../assets/images/300.png";
 import { scroller } from "react-scroll";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [menuSandwichOpen, setMenuSandwichOpen] = useState<boolean>(false);
+
   const handleServiceScroll = (target: string) => {
     const id: string = target;
 
@@ -62,55 +70,63 @@ const NavBar = () => {
         <div className={style["title-container"]}>
           <img src={image} className={style.image} />
 
-          <div>
+          <div className={style.title}>
             <h1>AGROFORRAJES FERREYRA S.R.L</h1>
             <p>PICADO DE FORRAJES</p>
           </div>
         </div>
 
-        <div className={style["buttons-container"]}>
-          <div
-            className={style.button}
-            onClick={() => {
-              handleServiceScroll("home");
-            }}
-          >
-            INICIO
-          </div>
-          <div
-            className={style.button}
-            onClick={() => {
-              handleServiceScroll("service");
-            }}
-          >
-            SERVICIOS
-          </div>
-          <div
-            className={style.button}
-            onClick={() => {
-              handleServiceScroll("about");
-            }}
-          >
-            HISTORIA
-          </div>
-          <div
-            className={style.button}
-            onClick={() => {
-              handleServiceScroll("image-gallery");
-            }}
-          >
-            GALERIA
-          </div>
-          <div
-            className={style.button}
-            onClick={() => {
-              handleServiceScroll("contact");
-            }}
-          >
-            CONTACTANOS
-          </div>
-        </div>
+        {menuSandwichOpen ? (
+          <CloseIcon onClick={() => setMenuSandwichOpen(false)} />
+        ) : (
+          <SandwichMenuIcon onClick={() => setMenuSandwichOpen(true)} />
+        )}
       </section>
+
+      <div
+        className={`${style["buttons-container"]} ${menuSandwichOpen ? style["buttons-container_open"] : ""}`}
+      >
+        <div
+          className={style.button}
+          onClick={() => {
+            handleServiceScroll("home");
+          }}
+        >
+          INICIO
+        </div>
+        <div
+          className={style.button}
+          onClick={() => {
+            handleServiceScroll("service");
+          }}
+        >
+          SERVICIOS
+        </div>
+        <div
+          className={style.button}
+          onClick={() => {
+            handleServiceScroll("about");
+          }}
+        >
+          HISTORIA
+        </div>
+        <div
+          className={style.button}
+          onClick={() => {
+            handleServiceScroll("image-gallery");
+          }}
+        >
+          GALERIA
+        </div>
+        <div
+          className={style.button}
+          onClick={() => {
+            handleServiceScroll("contact");
+          }}
+        >
+          CONTACTANOS
+        </div>
+      </div>
     </nav>
   );
 };
