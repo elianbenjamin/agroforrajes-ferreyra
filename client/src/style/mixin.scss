@@ -9,8 +9,8 @@
 }
 
 @mixin brown-blur () {
-  background-color: rgba(127, 76, 43, 0.134);
   backdrop-filter: blur(5px);
+  background-color: rgba(127, 76, 43, 0.134);
   transition: background-color 0.5s;
 
   &:hover {

@@ -90,6 +90,7 @@ const NavBar = () => {
           className={style.button}
           onClick={() => {
             handleServiceScroll("home");
+            setMenuSandwichOpen(false);
           }}
         >
           INICIO
@@ -98,6 +99,7 @@ const NavBar = () => {
           className={style.button}
           onClick={() => {
             handleServiceScroll("service");
+            setMenuSandwichOpen(false);
           }}
         >
           SERVICIOS
@@ -106,6 +108,7 @@ const NavBar = () => {
           className={style.button}
           onClick={() => {
             handleServiceScroll("about");
+            setMenuSandwichOpen(false);
           }}
         >
           HISTORIA
@@ -114,6 +117,7 @@ const NavBar = () => {
           className={style.button}
           onClick={() => {
             handleServiceScroll("image-gallery");
+            setMenuSandwichOpen(false);
           }}
         >
           GALERIA
@@ -122,6 +126,7 @@ const NavBar = () => {
           className={style.button}
           onClick={() => {
             handleServiceScroll("contact");
+            setMenuSandwichOpen(false);
           }}
         >
           CONTACTANOS
