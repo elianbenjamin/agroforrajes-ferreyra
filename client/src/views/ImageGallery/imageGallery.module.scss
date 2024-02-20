@@ -126,16 +126,12 @@
 
 @media screen and (max-width: 1300px) {
   .image-gallery {
-    border: solid blue;
-
     .content {
       .gallery {
-        border: solid red;
         flex-direction: column;
         align-items: center;
 
         .image-container {
-          border: solid yellow;
           height: 350px;
         }
       }
@@ -145,7 +141,6 @@
 
 @media screen and (max-width: 1120px) {
   .image-gallery {
-    border: solid blue;
     height: auto;
 
     .title-container {
@@ -159,7 +154,6 @@
     }
     .content {
       .buttons-container {
-        border: solid black;
         .button {
           height: 50px;
           width: 50px;
@@ -171,7 +165,6 @@
         }
       }
       .gallery {
-        border: solid red;
         display: grid;
         grid-template-columns: 50% 50%;
 
@@ -180,7 +173,7 @@
 
         .image-container {
           margin: 20px;
-          border: solid yellow;
+
           justify-content: center;
           align-items: center;
           height: 300px;
@@ -192,8 +185,6 @@
 
 @media screen and (max-width: 500px) {
   .image-gallery {
-    border: solid blue;
-
     .title-container {
       h1 {
         font-size: 1.7em;
@@ -205,7 +196,6 @@
     }
     .content {
       .buttons-container {
-        border: solid black;
         .button {
           height: 45px;
           width: 45px;
@@ -217,10 +207,7 @@
         }
       }
       .gallery {
-        border: solid red;
-
         .image-container {
-          border: solid yellow;
           height: 250px;
         }
       }
@@ -230,8 +217,6 @@
 
 @media screen and (max-width: 412px) {
   .image-gallery {
-    border: solid blue;
-
     .title-container {
       h1 {
         font-size: 1.7em;
@@ -243,7 +228,6 @@
     }
     .content {
       .buttons-container {
-        border: solid black;
         .button {
           height: 45px;
           width: 45px;
@@ -255,10 +239,7 @@
         }
       }
       .gallery {
-        border: solid red;
-
         .image-container {
-          border: solid yellow;
           height: 200px;
         }
       }
@@ -267,8 +248,6 @@
 }
 @media screen and (max-width: 280px) {
   .image-gallery {
-    border: solid blue;
-
     .title-container {
       h1 {
         font-size: 1.7em;
@@ -280,7 +259,6 @@
     }
     .content {
       .buttons-container {
-        border: solid black;
         .button {
           height: 45px;
           width: 45px;
@@ -292,8 +270,6 @@
         }
       }
       .gallery {
-        border: solid red;
-
         .image-container {
           border: solid yellow;
           height: 150px;
