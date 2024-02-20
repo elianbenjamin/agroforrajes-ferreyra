@@ -9,7 +9,7 @@
 }
 
 @mixin brown-blur () {
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   background-color: rgba(127, 76, 43, 0.134);
   transition: background-color 0.5s;
 

@@ -8,11 +8,24 @@ import {
 } from "../../assets/Icons";
 import image from "../../assets/images/300.png";
 import NavBarButtons from "../NavBarButtons/NavBarButtons";
+import { scroller } from "react-scroll";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuSandwichOpen, setMenuSandwichOpen] = useState<boolean>(false);
   const [responsiveButtons, setResponsiveButtons] = useState<boolean>(false);
+
+  const handleScroll = (target: string) => {
+    const id: string = target;
+
+    setTimeout(() => {
+      scroller.scrollTo(id, {
+        duration: 1300,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+    }, 0);
+  };
 
   useEffect(() => {
     const handleScrol = () => {
@@ -35,7 +48,6 @@ const NavBar = () => {
       removeEventListener("resize", handleResize);
     };
   }, []);
-
 
   return (
     <>
@@ -68,7 +80,10 @@ const NavBar = () => {
         </section>
 
         <section className={style["navBar-bottom"]}>
-          <div className={style["title-container"]}>
+          <div
+            className={style["title-container"]}
+            onClick={() => handleScroll("home")}
+          >
             <img src={image} className={style.image} />
 
             <div className={style.title}>
@@ -77,15 +92,14 @@ const NavBar = () => {
             </div>
           </div>
 
-          <SandwichMenuIcon onClick={() => {
-            setMenuSandwichOpen(true);
-          }} />
+          <SandwichMenuIcon
+            onClick={() => {
+              setMenuSandwichOpen(true);
+            }}
+          />
         </section>
 
-        {!responsiveButtons ? (
-          <NavBarButtons
-          />
-        ) : null}
+        {!responsiveButtons ? <NavBarButtons /> : null}
       </nav>
 
       {responsiveButtons ? (
