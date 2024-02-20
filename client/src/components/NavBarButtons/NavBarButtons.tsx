@@ -1,7 +1,6 @@
 import { scroller } from "react-scroll";
 import style from "./navBarButtons.module.scss";
 import { CloseIcon } from "../../assets/Icons";
-import { useEffect } from "react";
 
 interface Props {
   setMenuSandwichOpen?: (boolean: boolean) => void;
@@ -9,7 +8,7 @@ interface Props {
 }
 
 const NavBarButtons = ({ setMenuSandwichOpen, menuSandwichOpen }: Props) => {
-  const handleServiceScroll = (target: string) => {
+  const handleScroll = (target: string) => {
     const id: string = target;
 
     setTimeout(() => {
@@ -32,7 +31,7 @@ const NavBarButtons = ({ setMenuSandwichOpen, menuSandwichOpen }: Props) => {
       <div
         className={style.button}
         onClick={() => {
-          handleServiceScroll("home");
+          handleScroll("home");
           if (setMenuSandwichOpen) setMenuSandwichOpen(false);
         }}
       >
@@ -41,7 +40,7 @@ const NavBarButtons = ({ setMenuSandwichOpen, menuSandwichOpen }: Props) => {
       <div
         className={style.button}
         onClick={() => {
-          handleServiceScroll("service");
+          handleScroll("service");
           if (setMenuSandwichOpen) setMenuSandwichOpen(false);
         }}
       >
@@ -50,7 +49,7 @@ const NavBarButtons = ({ setMenuSandwichOpen, menuSandwichOpen }: Props) => {
       <div
         className={style.button}
         onClick={() => {
-          handleServiceScroll("about");
+          handleScroll("about");
           if (setMenuSandwichOpen) setMenuSandwichOpen(false);
         }}
       >
@@ -59,7 +58,7 @@ const NavBarButtons = ({ setMenuSandwichOpen, menuSandwichOpen }: Props) => {
       <div
         className={style.button}
         onClick={() => {
-          handleServiceScroll("image-gallery");
+          handleScroll("image-gallery");
           if (setMenuSandwichOpen) setMenuSandwichOpen(false);
         }}
       >
@@ -68,7 +67,7 @@ const NavBarButtons = ({ setMenuSandwichOpen, menuSandwichOpen }: Props) => {
       <div
         className={style.button}
         onClick={() => {
-          handleServiceScroll("contact");
+          handleScroll("contact");
           if (setMenuSandwichOpen) setMenuSandwichOpen(false);
         }}
       >

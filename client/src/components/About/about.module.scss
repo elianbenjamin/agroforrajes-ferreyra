@@ -10,10 +10,10 @@
 
   &::after {
     content: "";
-    background-image: url(../../assets/images/silopuente2.jpeg);
+    background: url(../../assets/images/silopuente2.jpeg) center center no-repeat fixed;
     background-size: cover;
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     top: 0;
     left: 0;
@@ -21,6 +21,7 @@
   }
   &::before {
     @include background-opacity();
+    height: 100%;
     z-index: -9;
   }
 

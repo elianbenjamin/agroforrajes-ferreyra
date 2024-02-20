@@ -12,10 +12,13 @@
 
   &::after {
     content: "";
-    background-image: url("../../assets/images/Picadora-Claas.jpeg");
+    background: url("../../assets/images/Picadora-Claas.jpeg") center center no-repeat fixed;
     background-size: cover;
+    // background-image: url("../../assets/images/Picadora-Claas.jpeg");
+    // background-size: auto 100%;
+    // background-position: center;
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     top: 0;
     left: 0;
@@ -23,6 +26,7 @@
   }
   &::before {
     @include background-opacity();
+    height: 100%;
     z-index: -9;
   }
 
@@ -150,6 +154,7 @@
     }
   }
 }
+
 @media screen and (max-width: 820px) {
   .Service {
     gap: 10px;
