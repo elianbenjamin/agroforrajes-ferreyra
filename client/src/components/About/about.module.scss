@@ -39,6 +39,7 @@
     padding: 35px;
     max-width: 50%;
     margin-top: 6%;
+    
 
     h1 {
       font-weight: bolder;
@@ -112,6 +113,33 @@
     
   }
 }
+@media screen and (max-width: 1042px) {
+  .About {
+    
+    flex-direction: column;
+    .left-container {
+      max-width: 100%;
+      padding: 20px;
+      margin-top: 50px;
+
+      h1 {
+        font-size: 1.6em;
+      }
+      p {
+        font-size: 1.4em;
+      }
+    }
+
+    .right-container {
+      max-width: 100%;
+      margin: 0;
+      padding: 5px;
+      div {
+        min-width: 40%;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 768px) {
   .About {
@@ -171,15 +199,16 @@
 @media screen and (max-width: 400px) {
   .About {
     .left-container {
-      margin-top: 75px;
+      margin-top: 95px;
       padding: 10px;
       align-items: center;
       h1 {
-        font-size: 1em;
+        font-size: 1.3em;
       }
 
       p {
         font-size: medium;
+        line-height: 1.4em;
         padding: 8px;
       }
     }
