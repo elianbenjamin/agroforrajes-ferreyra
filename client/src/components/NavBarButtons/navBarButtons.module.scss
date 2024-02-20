@@ -1,0 +1,89 @@
+@import '../../style/mixin.scss';
+
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 50%;
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 0;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      transform: translateX(-101%);
+      background-color: #a66400;
+      height: 2px;
+      transition: transform 0.5s;
+      width: 100%;
+    }
+
+    &:hover::after {
+      transform: translateX(0);
+    }
+  }
+
+  svg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .buttons-container {
+    position: fixed;
+    border: var(--border-transparent);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 200;
+    background-color: var(--hover-color);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 40px;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+    width: 350px;
+    gap: 30px;
+
+    .button {
+      margin: 0 20px;
+    }
+
+    svg {
+      display: block;
+      height: 40px;
+      width: 40px;
+      align-self: flex-end;
+      cursor: pointer;
+    }
+  }
+  .buttons-container_open {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .buttons-container {
+    width: 100%;
+  }
+}

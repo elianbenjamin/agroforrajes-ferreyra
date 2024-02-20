@@ -1,7 +1,7 @@
 @import "../../style/mixin.scss";
 
 .Service {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -36,11 +36,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50%;
     width: 80%;
 
     .service {
-      border-radius: 100px;
+      border-radius: 25px;
       width: 40%;
       border: var(--border);
       display: flex;
@@ -93,6 +92,10 @@
 }
 @media screen and (max-width: 1326px) {
   .Service {
+    gap: 50px;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+
     .services-container {
       width: 100%;
       display: flex;
@@ -122,19 +125,20 @@
 }
 @media screen and (max-width: 960px) {
   .Service {
-    gap: 0px;
+    gap: 10px;
+    padding: 15px 0;
+
     .services-container {
-      transform: translateY(8%);
       width: 100%;
-      height: 600px;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: center;
+      gap: 15px;
 
       .service {
-        height: 280px;
+        height: auto;
         width: 800px;
-        padding: 0px 60px;
+        padding: 20px;
         display: flex;
         justify-content: center;
       }
@@ -146,24 +150,28 @@
     }
   }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 820px) {
   .Service {
+    gap: 10px;
+    justify-content: flex-end;
+
     .services-container {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      gap: 10px;
+      transform: translate(0);
+      padding-bottom: 10px;
+
 
       .service {
-        height: 280px;
-        width: 380px;
+        padding: 20px;
+        width: 95%;
         display: flex;
         justify-content: center;
 
         .service-text {
-          margin-bottom: 18%;
-          padding: 10px 5px;
-          width: 350px;
-          font-size: 15px;
+          width: 100%;
           display: flex;
           justify-content: center;
         }
@@ -174,7 +182,7 @@
 
           h2 {
             width: 400px;
-            font-size: 25px;
+            font-size: 1.2em;
           }
 
           svg {
@@ -182,11 +190,6 @@
           }
         }
       }
-    }
-    .title {
-      font-weight: 700;
-      font-size: 26px;
-      border-bottom: var(--border);
     }
   }
 }

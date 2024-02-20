@@ -46,7 +46,15 @@ const Carousel = () => {
 
   return (
     <div className={styles.carousel}>
-      <img src={selectedImage} onLoad={() => {setOn(true)}} className={on ? styles.img_on : ''}/>
+
+        <img
+          src={selectedImage}
+          onLoad={() => {
+            setOn(true);
+          }}
+          className={on ? styles.img_on : ""}
+        />
+
     </div>
   );
 };
