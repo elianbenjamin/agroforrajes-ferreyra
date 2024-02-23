@@ -20,7 +20,7 @@
     z-index: -10;
   }
   &::before {
-    @include background-opacity();
+    @include background_opacity();
     height: 100%;
     z-index: -9;
   }
@@ -39,7 +39,7 @@
     position: relative;
     padding: 35px;
     max-width: 50%;
-    margin-top: 6%;
+    margin-top: 4%;
     
 
     h1 {
@@ -52,6 +52,11 @@
       font-size: 1.5em;
       padding: 15px;
       text-align: justify;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    .text_on {
+      opacity: 1;
     }
 
     .flota-button {
@@ -65,7 +70,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      @include brown-blur();
+      @include brown_blur();
     }
   }
 
@@ -76,7 +81,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 6%;
+    margin-top: 4%;
     padding: 20px 10px;
 
     div {
@@ -101,6 +106,7 @@
 @media screen and (max-width: 1326px) {
   .About {
     padding: 20px;
+    
     .left-container {
       max-width: 100%;
 
@@ -116,8 +122,8 @@
 }
 @media screen and (max-width: 1042px) {
   .About {
-    
     flex-direction: column;
+    
     .left-container {
       max-width: 100%;
       padding: 20px;

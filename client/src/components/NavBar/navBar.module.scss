@@ -11,6 +11,7 @@
   position: fixed;
   top: 0;
   z-index: 100;
+  @include brown_blur();
   backdrop-filter: none;
   transition:
     transform 0.5s,
@@ -29,7 +30,7 @@
   flex: 1;
   border-bottom: var(--border);
   position: relative;
-  @include brown-blur();
+  backdrop-filter: blur(10px);
 
 
   .email-icon {
@@ -91,7 +92,8 @@
   width: 100%;
   flex: 9;
   padding: 0 20px;
-  @include brown-blur();
+  backdrop-filter: blur(10px);
+
 
 
   .title-container {

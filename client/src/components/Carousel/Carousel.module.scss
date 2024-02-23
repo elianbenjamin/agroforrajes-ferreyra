@@ -14,7 +14,7 @@
   overflow: hidden;
 
   &::after {
-    @include background-opacity();
+    @include background_opacity();
     position: absolute;
     top: 0;
     left: 0;

@@ -53,7 +53,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @include brown-blur ();
+  @include brown_blur ();
 
   svg {
     height: 100%;
