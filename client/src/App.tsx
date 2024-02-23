@@ -5,6 +5,9 @@ import Landing from "./views/Landing/Landing";
 import { useEffect } from "react";
 import { scroller } from "react-scroll";
 import { ErrorPage } from "./components/ErrorPage";
+import { Footer } from "./components/Footer";
+import PicadoDetail from "./components/ServiceDetail/PicadoDetail";
+import SiembraDetail from "./components/ServiceDetail/SiembraDetail";
 
 function App() {
   const { pathname } = useLocation();
@@ -20,12 +23,16 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App" id="app">
       {pathname === "/" && <NavBar />}
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/picado" element={<PicadoDetail />} />
+        <Route path="/siembra" element={<SiembraDetail />} /> 
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+
+      <Footer />
     </div>
   );
 }
