@@ -1,8 +1,8 @@
 import style from "./landing.module.scss";
 import Home from "../../components/Home/Home";
-import { Service } from "../../components/Service";
-import { About } from "../../components/About";
-import { Gallery } from "../ImageGallery";
+import Service from "../../components/Service/Service";
+import About from "../../components/About/About";
+import ImageGallery from "../ImageGallery/ImageGallery";
 import { useEffect } from "react";
 import { scroller } from "react-scroll";
 
@@ -22,7 +22,7 @@ const Landing = () => {
       <Home />
       <Service />
       <About />
-      <Gallery />
+      <ImageGallery />
     </div>
   );
 };

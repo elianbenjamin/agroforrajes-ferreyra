@@ -1,7 +1,7 @@
 import style from "./home.module.scss";
 import { WhatsappIconGreen, ArrowDown } from "../../assets/Icons";
 import { scroller } from "react-scroll";
-import { Carousel } from "../Carousel";
+import Carousel from "../Carousel/Carousel";
 
 
 const Home = () => {

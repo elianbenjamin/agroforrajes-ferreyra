@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Carousel } from "../Carousel";
+import Carousel from "../Carousel/Carousel";
 import styles from "./errorPage.module.scss";
 
 const ErrorPage = () => {

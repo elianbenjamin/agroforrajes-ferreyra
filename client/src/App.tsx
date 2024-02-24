@@ -4,8 +4,8 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Landing from "./views/Landing/Landing";
 import { useEffect } from "react";
 import { scroller } from "react-scroll";
-import { ErrorPage } from "./components/ErrorPage";
-import { Footer } from "./components/Footer";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
+import Footer from "./components/Footer/Footer";
 import PicadoDetail from "./components/ServiceDetail/PicadoDetail";
 import SiembraDetail from "./components/ServiceDetail/SiembraDetail";
 
