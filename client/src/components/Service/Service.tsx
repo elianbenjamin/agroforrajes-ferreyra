@@ -1,6 +1,5 @@
 import styles from "./Service.module.scss";
 import { SeedIcon, CornIcon } from "../../assets/Icons";
-import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 
 const Service = () => {
