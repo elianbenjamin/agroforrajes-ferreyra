@@ -58,7 +58,7 @@ const NavBar = () => {
           <EmailIcon className={style["email-icon"]} />
           <p>
             {" "}
-            agroforrajesferreyra<p>@</p>gmail.com
+            agroforrajesferreyra@gmail.com
           </p>
 
           <div className={style["icons-container"]}>

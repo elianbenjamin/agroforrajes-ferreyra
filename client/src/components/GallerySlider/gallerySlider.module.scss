@@ -8,21 +8,29 @@
   align-items: center;
   border: var(--border-transparent);
   backdrop-filter: blur(10px);
+  border: solid yellow;
 
   .Slider {
     width: 90%;
     margin: 0 auto;
+    border: solid blue;
 
     .imgContainer {
       overflow: hidden;
       height: 450px;
       width: 200px;
+      border: solid red;
 
       div {
         height: 100%;
-        width: 80%;
-        overflow: hidden;
+        width: 330px;
         margin: 0 auto;
+        border: solid green;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
 
         img {
           max-height: 100%;

@@ -52,8 +52,8 @@ const GallerySlider = () => {
   return (
     <div className={style.SliderContainer}>
       <Slider className={style.Slider} {...settings}>
-        {images.map((img) => (
-          <div className={style.imgContainer}>
+        {images.map((img, i) => (
+          <div className={style.imgContainer} key={i}>
             <div>
               <img src={img} />
             </div>

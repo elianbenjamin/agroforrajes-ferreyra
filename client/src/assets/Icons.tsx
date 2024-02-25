@@ -28,9 +28,9 @@ export function ArrowDown(props: SVGProps<SVGSVGElement>) {
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
         d="m6 13l6 6l6-6M6 5l6 6l6-6"
       />
     </svg>
@@ -48,8 +48,8 @@ export function WhatsappIconGreen(props: SVGProps<SVGSVGElement>) {
           y1="100%"
           y2="0%"
         >
-          <stop offset="0%" stop-color="#1FAF38" />
-          <stop offset="100%" stop-color="#60D669" />
+          <stop offset="0%" stopColor="#1FAF38" />
+          <stop offset="100%" stopColor="#60D669" />
         </linearGradient>
         <linearGradient
           id="IconifyId18d8aef42ff45225d3"
@@ -58,8 +58,8 @@ export function WhatsappIconGreen(props: SVGProps<SVGSVGElement>) {
           y1="100%"
           y2="0%"
         >
-          <stop offset="0%" stop-color="#F9F9F9" />
-          <stop offset="100%" stop-color="#FFF" />
+          <stop offset="0%" stopColor="#F9F9F9" />
+          <stop offset="100%" stopColor="#FFF" />
         </linearGradient>
       </defs>
       <path
@@ -95,9 +95,9 @@ export function SeedIcon(props: SVGProps<SVGSVGElement>) {
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
         d="M12 10a6 6 0 0 0-6-6H3v2a6 6 0 0 0 6 6h3m0 2a6 6 0 0 1 6-6h3v1a6 6 0 0 1-6 6h-3m0 5V10"
       />
     </svg>
@@ -121,9 +121,9 @@ export function MessageIcon(props: SVGProps<SVGSVGElement>) {
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.2"
         d="M4 21V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8zm8-10v.01M8 11v.01m8-.01v.01"
       />
     </svg>
