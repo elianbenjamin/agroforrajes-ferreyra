@@ -1,48 +1,46 @@
 import styles from "./imageGallery.module.scss";
-import {
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image6,
-  image7,
-  image8,
-  image9,
-  image10,
-  image11,
-  image12,
-  image13,
-} from "../../assets/gallery-images/export";
+// import {
+//   image1,
+//   image2,
+//   image3,
+//   image4,
+//   image5,
+//   image6,
+//   image7,
+//   image8,
+//   image9,
+//   image10,
+//   image11,
+//   image12,
+//   image13,
+// } from "../../assets/gallery-images/export";
 import { useState } from "react";
 import { PagingArrow } from "../../assets/Icons";
+import Slider from "../../components/GallerySlider/GallerySlider";
+import GallerySlider from "../../components/GallerySlider/GallerySlider";
 
-const images = [
-  [image1, image2, image3, image4],
-  [image5, image6, image7, image8],
-  [image9, image10, image11, image12],
-];
+
 
 const ImageGallery = () => {
-  const [actualPage, setActualPage] = useState<number>(0);
-  const [imageOn, setImageOn] = useState<boolean>(false);
+//   const [actualPage, setActualPage] = useState<number>(0);
+//   const [imageOn, setImageOn] = useState<boolean>(false);
 
-  const handlePrev = () => {
-    setImageOn(false);
-    setTimeout(() => {
-      actualPage <= 0
-        ? setActualPage(images.length - 1)
-        : setActualPage(actualPage - 1);
-    }, 500);
-  };
-  const handleNext = () => {
-    setImageOn(false);
-    setTimeout(() => {
-      actualPage < images.length - 1
-        ? setActualPage(actualPage + 1)
-        : setActualPage(0);
-    }, 500);
-  };
+//   const handlePrev = () => {
+//     setImageOn(false);
+//     setTimeout(() => {
+//       actualPage <= 0
+//         ? setActualPage(images.length - 1)
+//         : setActualPage(actualPage - 1);
+//     }, 500);
+//   };
+//   const handleNext = () => {
+//     setImageOn(false);
+//     setTimeout(() => {
+//       actualPage < images.length - 1
+//         ? setActualPage(actualPage + 1)
+//         : setActualPage(0);
+//     }, 500);
+//   };
 
   return (
     <div className={styles["image-gallery"]} id="image-gallery">
@@ -54,7 +52,9 @@ const ImageGallery = () => {
         </p>
       </section>
 
-      <section className={styles.content}>
+      <GallerySlider />
+
+      {/* <section className={styles.content}>
         <div className={styles["buttons-container"]}>
           <div className={styles.button} onClick={handlePrev}>
             <PagingArrow style={{ transform: "rotate(180deg)" }} />
@@ -80,7 +80,7 @@ const ImageGallery = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

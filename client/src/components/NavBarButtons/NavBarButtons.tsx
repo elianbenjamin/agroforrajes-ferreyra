@@ -9,10 +9,9 @@ interface Props {
 
 const NavBarButtons = ({ setMenuSandwichOpen, menuSandwichOpen }: Props) => {
   const handleScroll = (target: string) => {
-    const id: string = target;
 
     setTimeout(() => {
-      scroller.scrollTo(id, {
+      scroller.scrollTo(target, {
         duration: 1300,
         delay: 0,
         smooth: "easeInOutQuart",
@@ -33,6 +32,7 @@ const NavBarButtons = ({ setMenuSandwichOpen, menuSandwichOpen }: Props) => {
         onClick={() => {
           handleScroll("home");
           if (setMenuSandwichOpen) setMenuSandwichOpen(false);
+          console.log('si')
         }}
       >
         INICIO
