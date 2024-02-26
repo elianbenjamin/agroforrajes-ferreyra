@@ -16,9 +16,14 @@ import {
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { ReactNode } from "react";
+import { useState } from "react";
+import { createPortal } from "react-dom";
+import FullSizeImage from "../FullSizeImage/FullSizeImage";
 
 const GallerySlider = () => {
+  const root: Element = document.querySelector("#root") as Element;
+  const [fullSizeImage, setFullSizeImage] = useState<null | string>(null);
+
   const images = [
     image1,
     image2,
@@ -43,24 +48,39 @@ const GallerySlider = () => {
         breakpoint: 1043,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2
-        }
+          slidesToScroll: 2,
+        },
       },
     ],
   };
 
   return (
-    <div className={style.SliderContainer}>
-      <Slider className={style.Slider} {...settings}>
-        {images.map((img, i) => (
-          <div className={style.imgContainer} key={i}>
-            <div>
-              <img src={img} />
+    <>
+      <div className={style.SliderContainer}>
+        <Slider className={style.Slider} {...settings}>
+          {images.map((img, i) => (
+            <div
+              className={style.imgContainer}
+              key={i}
+              onClick={() => {
+                setFullSizeImage(img);
+              }}
+            >
+              <div>
+                <img src={img} />
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
+          ))}
+        </Slider>
+      </div>
+
+      {/* {fullSizeImage ? createPortal(<div className={style.fullSizeImage}>
+        
+      </div>, root) : null} */}
+      {
+        fullSizeImage ? <FullSizeImage /> : null
+      }
+    </>
   );
 };
 

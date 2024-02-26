@@ -22,13 +22,14 @@ function App() {
     }, 1000);
   }, []);
 
+
   return (
     <div className="App" id="app">
       {pathname === "/" && <NavBar />}
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/picado" element={<PicadoDetail />} />
-        <Route path="/siembra" element={<SiembraDetail />} /> 
+        <Route path="/siembra" element={<SiembraDetail />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 

@@ -16,6 +16,7 @@ const Home = () => {
   
 
   return (
+    
     <div className={style.Home} id="home">
       <Carousel />
 

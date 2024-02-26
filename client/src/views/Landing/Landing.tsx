@@ -18,7 +18,7 @@ const Landing = () => {
   }, [])
 
   return (
-    <div className={style.Landing}>
+    <div className={style.Landing} id="landing">
       <Home />
       <Service />
       <About />

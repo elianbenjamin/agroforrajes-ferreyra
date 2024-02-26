@@ -1,6 +1,7 @@
 import { scroller } from "react-scroll";
 import style from "./navBarButtons.module.scss";
 import { CloseIcon } from "../../assets/Icons";
+import { useEffect } from "react";
 
 interface Props {
   setMenuSandwichOpen?: (boolean: boolean) => void;
@@ -9,7 +10,6 @@ interface Props {
 
 const NavBarButtons = ({ setMenuSandwichOpen, menuSandwichOpen }: Props) => {
   const handleScroll = (target: string) => {
-
     setTimeout(() => {
       scroller.scrollTo(target, {
         duration: 1300,
@@ -32,7 +32,6 @@ const NavBarButtons = ({ setMenuSandwichOpen, menuSandwichOpen }: Props) => {
         onClick={() => {
           handleScroll("home");
           if (setMenuSandwichOpen) setMenuSandwichOpen(false);
-          console.log('si')
         }}
       >
         INICIO
