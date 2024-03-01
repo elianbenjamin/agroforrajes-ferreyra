@@ -1,13 +1,29 @@
-@import '../../style/mixin.scss';
+@import "../../style/mixin.scss";
 
 .Service-detail {
   display: flex;
   flex-direction: column;
-
   min-height: 100vh;
   width: 100vw;
+  position: relative;
 
-  
+  &::after {
+    content: "";
+    background: url(../../assets/gallery-images/picadooras.jpeg) center center
+      no-repeat fixed;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+  &::before {
+    @include background_opacity();
+    height: 100%;
+    z-index: -9;
+  }
   .nav-bar {
     height: 100px;
     padding-left: 60px;
@@ -33,12 +49,311 @@
     flex-direction: column;
     gap: 20px;
     text-align: justify;
+    p {
+      font-size: 1.2em;
+    }
   }
 
-  .images {
+  .image-container {
+    flex: 1;
+    overflow: hidden;
     padding: 0 40px;
+    margin: 30px 0px;
     display: flex;
     flex-wrap: wrap;
-    gap: 50px
+    gap: 50px;
+
+    div {
+      flex: 1;
+      margin: 10px;
+      min-width: 30%;
+      height: 550px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px black;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .whatsapp-container {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    bottom: 5%;
+    right: 3%;
+    z-index: 100;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .Service-detail {
+    .nav-bar {
+      height: 90px;
+      padding-left: 50px;
+    }
+    .image-container {
+      margin-top: 50px;
+      gap: 20px;
+      div {
+        flex: 1;
+        margin: 10px;
+        min-width: 25%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .Service-detail {
+    .nav-bar {
+      height: 90px;
+      padding-left: 50px;
+    }
+    .image-container {
+      margin-top: 50px;
+      gap: 20px;
+      div {
+        flex: 1;
+        margin: 10px;
+        min-width: 25%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Service-detail {
+    .nav-bar {
+      height: 80px;
+      padding-left: 50px;
+    }
+    h1 {
+      font-size: 1.6em;
+    }
+    .text {
+      p {
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 929px) {
+  .Service-detail {
+    .nav-bar {
+      height: 75px;
+      padding-left: 50px;
+    }
+    h1 {
+      font-size: 1.4em;
+    }
+    .text {
+      p {
+        font-size: 1.1em;
+      }
+    }
+    .image-container {
+      margin-top: 50px;
+      gap: 15px;
+      div {
+        flex: 1;
+        margin: 10px;
+        min-width: 25%;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .Service-detail {
+    .nav-bar {
+      height: 70px;
+      padding-left: 50px;
+    }
+    h1 {
+      font-size: 1.3em;
+      margin: 20px;
+    }
+    .text {
+      padding: 0 25px;
+      p {
+        font-size: 1em;
+      }
+    }
+    .image-container {
+      padding: 0 25px;
+      margin: 20px 0px;
+      gap: 15px;
+      div {
+        flex: 1;
+        margin: 10px;
+        min-width: 25%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Service-detail {
+    .nav-bar {
+      height: 65px;
+      padding-left: 50px;
+    }
+
+    h1 {
+      font-size: 1.3em;
+      margin: 20px;
+    }
+    .text {
+      gap: 15px;
+      padding: 0 15px;
+      p {
+        font-size: 1em;
+      }
+    }
+    .image-container {
+      padding: 0 5px;
+      margin: 20px 0px;
+      gap: 10px;
+      div {
+        flex: 1;
+        margin: 10px;
+        min-width: 35%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Service-detail {
+    .nav-bar {
+      height: 60px;
+      padding-left: 50px;
+    }
+
+    h1 {
+      font-size: 1.1em;
+      margin: 20px;
+    }
+    .text {
+      gap: 15px;
+      padding: 0 10px;
+      p {
+        font-size: 0.9em;
+      }
+    }
+    .image-container {
+      padding: 0 5px;
+      margin: 20px 0px;
+      gap: 10px;
+      div {
+        flex: 1;
+        margin: 10px;
+        min-width: 35%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 352px) {
+  .Service-detail {
+    .nav-bar {
+      height: 60px;
+      padding-left: 50px;
+    }
+    h1 {
+      font-size: 0.9em;
+      margin: 20px;
+    }
+    .text {
+      gap: 5px;
+      padding: 0 10px;
+      p {
+        font-size: 0.8em;
+      }
+    }
+    .image-container {
+      padding: 0 5px;
+      margin: 20px 0px;
+      gap: 10px;
+      div {
+        flex: 1;
+        margin: 10px;
+        min-width: 25%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
   }
 }
