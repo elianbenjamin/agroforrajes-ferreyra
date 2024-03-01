@@ -2,7 +2,7 @@ import style from "./landing.module.scss";
 import Home from "../../components/Home/Home";
 import Service from "../../components/Service/Service";
 import About from "../../components/About/About";
-import ImageGallery from "../ImageGallery/ImageGallery";
+import ImageGallery from "../ImageGallery/Gallery";
 import { useEffect } from "react";
 import { scroller } from "react-scroll";
 
