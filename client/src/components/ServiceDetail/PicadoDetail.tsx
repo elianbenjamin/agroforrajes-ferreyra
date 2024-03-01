@@ -1,11 +1,25 @@
 import style from "./picadoDetail.module.scss";
 import { useEffect } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { scroller } from "react-scroll";
+import { WhatsappIconGreen } from "../../assets/Icons";
+import {
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+} from "../../assets/gallery-images/export";
 
+const whatsappMessage = encodeURIComponent(
+  "Hola, estoy interesado en el servicio de Picado de Agroforrajes Ferreyra. ¿Podemos hablar más sobre cómo puede beneficiar a mis cultivos?"
+);
 const PicadoDetail = () => {
-  const { id } = useParams();
-  console.log(id);
+
 
   useEffect(() => {
     scroller.scrollTo("app", {
@@ -64,48 +78,43 @@ const PicadoDetail = () => {
         </p>
       </section>
 
-      <section className={style.images}>
-        <div
-          style={{ height: "350px", width: "350px", border: "solid red 1px" }}
-        >
-          Fotanca 1
+      <section className={style["image-container"]}>
+        <div>
+          <img src={image1} />
         </div>
-        <div
-          style={{ height: "350px", width: "350px", border: "solid red 1px" }}
-        >
-          Fotanca 2
+        <div>
+          <img src={image2} />
         </div>
-        <div
-          style={{ height: "350px", width: "350px", border: "solid red 1px" }}
-        >
-          Fotanca 3
+        <div>
+          <img src={image3} />
         </div>
-        <div
-          style={{ height: "350px", width: "350px", border: "solid red 1px" }}
-        >
-          Fotanca 4
+        <div>
+          <img src={image4} />
         </div>
-        <div
-          style={{ height: "350px", width: "350px", border: "solid red 1px" }}
-        >
-          Fotanca 5
+        <div>
+          <img src={image5} />
         </div>
-        <div
-          style={{ height: "350px", width: "350px", border: "solid red 1px" }}
-        >
-          Fotanca 6
+        <div>
+          <img src={image6} />
         </div>
-        <div
-          style={{ height: "200px", width: "200px", border: "solid red 1px" }}
-        >
-          Fotanca 7
+        <div>
+          <img src={image7} />
         </div>
-        <div
-          style={{ height: "200px", width: "200px", border: "solid red 1px" }}
-        >
-          Fotanca 8
+        <div>
+          <img src={image8} />
+        </div>
+        <div>
+          <img src={image9} />
         </div>
       </section>
+
+      <a
+        className={style["whatsapp-container"]}
+        href={`https://wa.me/3329561698?text=${whatsappMessage}`}
+        target="_blank"
+      >
+        <WhatsappIconGreen />
+      </a>
     </div>
   );
 };
