@@ -32,7 +32,6 @@
   position: relative;
   backdrop-filter: blur(10px);
 
-
   .email-icon {
     position: absolute;
     left: 5px;
@@ -88,8 +87,6 @@
   padding: 0 20px;
   backdrop-filter: blur(10px);
 
-
-
   .title-container {
     position: relative;
     height: 100%;
@@ -102,11 +99,17 @@
     cursor: pointer;
     user-select: none;
 
-    img {
-      max-height: 70px;
-      max-width: 70px;
+    .img-container {
+      height: 70px;
+      width: 70px;
       border-radius: 100px;
+      overflow: hidden;
+
+      img {
+        max-height: 100%;
+      }
     }
+
     .title {
       display: flex;
       justify-content: center;
@@ -124,8 +127,6 @@
   }
 }
 
-
-
 @media screen and (max-width: 1207px) {
   .buttons-container {
     margin-right: 0;
@@ -138,7 +139,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-
   .navBar-bottom {
     svg {
       display: block;
@@ -191,7 +191,6 @@
 
 @media screen and (max-width: 360px) {
   .navBar-top {
-
     .email-icon {
       position: static;
       height: 30px;
@@ -212,9 +211,7 @@
 
 @media screen and (max-width: 340px) {
   .navBar-bottom {
-    
     .title-container {
-
       .title {
         max-width: 160px;
         text-align: center;

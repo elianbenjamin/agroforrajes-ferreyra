@@ -56,10 +56,7 @@ const NavBar = () => {
       >
         <section className={style["navBar-top"]}>
           <EmailIcon className={style["email-icon"]} />
-          <p>
-            {" "}
-            agroforrajesferreyra@gmail.com
-          </p>
+          <p> agroforrajesferreyra@gmail.com</p>
 
           <div className={style["icons-container"]}>
             <a
@@ -84,7 +81,12 @@ const NavBar = () => {
             className={style["title-container"]}
             onClick={() => handleScroll("home")}
           >
-            <img src={image} className={style.image} />
+            <div className={style["img-container"]}>
+              <img
+                src={image}
+                className={style.image}
+              />
+            </div>
 
             <div className={style.title}>
               <h1>AGROFORRAJES FERREYRA S.R.L</h1>

@@ -1,12 +1,36 @@
 import styles from "./gallery.module.scss";
-import { useState } from "react";
 import GallerySlider from "../../components/GallerySlider/GallerySlider";
-import FullSizeImage from "../../components/FullSizeImage/FullSizeImage";
-
-
+import {
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
+  image11,
+  image12,
+} from "../../assets/gallery-images/export";
 
 const ImageGallery = () => {
-  const [imageOpen, setImageOpen] = useState<boolean>(false);
+
+  const images: string[] = [
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9,
+    image10,
+    image11,
+    image12,
+  ];
 
   return (
     <div className={styles["image-gallery"]} id="image-gallery">
@@ -18,11 +42,7 @@ const ImageGallery = () => {
         </p>
       </section>
 
-      <GallerySlider />
-
-      {
-        imageOpen ? <FullSizeImage/> : null
-      }
+      <GallerySlider images={images} />
 
     </div>
   );

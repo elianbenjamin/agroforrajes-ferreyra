@@ -14,13 +14,12 @@ import {
   image8,
   image9,
 } from "../../assets/gallery-images/export";
+import GallerySlider from "../GallerySlider/GallerySlider";
 
 const whatsappMessage = encodeURIComponent(
   "Hola, estoy interesado en el servicio de Picado de Agroforrajes Ferreyra. ¿Podemos hablar más sobre cómo puede beneficiar a mis cultivos?"
 );
 const PicadoDetail = () => {
-
-
   useEffect(() => {
     scroller.scrollTo("app", {
       duration: 0,
@@ -28,6 +27,18 @@ const PicadoDetail = () => {
       smooth: "easeInOutQuart",
     });
   }, []);
+
+  const images = [
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9,
+  ];
 
   return (
     <div className={style["Service-detail"]}>
@@ -78,35 +89,14 @@ const PicadoDetail = () => {
         </p>
       </section>
 
-      <section className={style["image-container"]}>
-        <div>
-          <img src={image1} />
-        </div>
-        <div>
-          <img src={image2} />
-        </div>
-        <div>
-          <img src={image3} />
-        </div>
-        <div>
-          <img src={image4} />
-        </div>
-        <div>
-          <img src={image5} />
-        </div>
-        <div>
-          <img src={image6} />
-        </div>
-        <div>
-          <img src={image7} />
-        </div>
-        <div>
-          <img src={image8} />
-        </div>
-        <div>
-          <img src={image9} />
-        </div>
-      </section>
+      {/* <section className={style["image-container"]}>
+        {images.map((img) => (
+          <div>
+            <img src={img} />
+          </div>
+        ))}
+      </section> */}
+      <GallerySlider images={images}/>
 
       <a
         className={style["whatsapp-container"]}

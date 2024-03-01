@@ -44,13 +44,20 @@
   }
 
   .text {
-    padding: 0 40px;
+    padding: 20px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     text-align: justify;
+    width: 98%;
+    align-self: center;
+    border: var(--border-transparent);
+    backdrop-filter: blur(10px);
+
     p {
       font-size: 1.2em;
+      width: 100%;
     }
   }
 
