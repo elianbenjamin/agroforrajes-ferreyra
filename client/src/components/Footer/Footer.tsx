@@ -7,6 +7,10 @@ import {
 } from "../../assets/Icons";
 import { LocationIcon } from "../../assets/Icons";
 
+const whatsappMessage = encodeURIComponent(
+  "¡Hola! Estoy interesado en obtener más información sobre los servicios de picado de forraje y siembra que ofrecen. ¿Podrían proporcionarme detalles adicionales y posiblemente programar una consulta? Gracias."
+);
+
 const Footer = () => {
   return (
     <div className={styles.Footer} id="contact">
@@ -39,9 +43,25 @@ const Footer = () => {
         </p>
 
         <div className={styles["icons-container"]}>
-          <InstagramIcon />
-          <LinkedinIcon />
-          <WhatsappIconDark />
+          <a style={{color: 'white'}}
+            href="https://www.instagram.com/agroforrajesferreyra/"
+            target="_blank"
+           
+          >
+            <InstagramIcon />
+          </a>
+          <a style={{color: 'white'}}
+            href="https://www.linkedin.com/in/agroforrajes-ferreyra/"
+            target="_blank"
+          >
+            <LinkedinIcon />
+          </a>
+          <a style={{color: 'white'}}
+            href={`https://wa.me/3329561698?text=${whatsappMessage}`}
+            target="_blank"
+          >
+            <WhatsappIconDark />
+          </a>
         </div>
 
         <p className={styles.copyright}>
@@ -54,19 +74,19 @@ const Footer = () => {
 
         <div>
           <p className={styles["contact-name"]}>Francisco Ferreyra tel:</p>
-          <p className={styles["contact-number"]}>3328732467</p>
+          <p className={styles["contact-number"]}>3329 56-1698</p>
         </div>
         <div>
           <p className={styles["contact-name"]}>Carlos Ferreyra tel:</p>
-          <p className={styles["contact-number"]}>3328732467</p>
+          <p className={styles["contact-number"]}>3329 62-9247</p>
         </div>
         <div>
           <p className={styles["contact-name"]}>Adrian Ferreyra tel:</p>
-          <p className={styles["contact-number"]}>3328732467</p>
+          <p className={styles["contact-number"]}>3329 56-1687</p>
         </div>
         <div>
           <p className={styles["contact-name"]}>Fernando Ferreyra tel:</p>
-          <p className={styles["contact-number"]}> 3328732467</p>
+          <p className={styles["contact-number"]}>3329 62-9242</p>
         </div>
       </section>
     </div>
