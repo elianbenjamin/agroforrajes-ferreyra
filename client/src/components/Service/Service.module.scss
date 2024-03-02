@@ -34,6 +34,7 @@
     font-weight: 700;
     font-size: 2.5em;
     border-bottom: var(--border);
+    text-align: center;
   }
 
   .services-container {
@@ -63,6 +64,7 @@
       &:hover {
         transform: scale(1.02);
       }
+
       &:hover::after {
         content: "Click para saber mas";
         position: absolute;
@@ -110,6 +112,8 @@
       .service {
         height: 400px;
         width: 450px;
+
+        
       }
     }
   }
@@ -125,6 +129,13 @@
       .service {
         height: 400px;
         width: 450px;
+
+        &::after {
+          content: "Click para saber mas";
+
+          text-align: center;
+          text-shadow: 2px 2px 4px #333;
+        }
       }
     }
   }

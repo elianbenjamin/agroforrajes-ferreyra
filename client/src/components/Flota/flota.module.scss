@@ -5,12 +5,30 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
 
-  
+  &::after {
+    content: "";
+    background: url("../../assets/images/Picadora-Claas.jpeg") center center
+      no-repeat fixed;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+  &::before {
+    @include background_opacity();
+    height: 100%;
+    z-index: -9;
+  }
 
   .nav-bar {
-    height: 100px;
+    align-self: stretch;
+    height: 92.5px;
     padding-left: 60px;
     display: flex;
     align-items: center;
@@ -22,32 +40,87 @@
     }
   }
   h1 {
-    align-self: center;
     margin: 30px;
     border-bottom: var(--border-transparent);
   }
 
-.container-all{
-display: flex;
-flex-direction: row;
-
-    .container-truck{
-      border: solid red 1px;
-  
-     
-    }
-    .container-picadoras{
-      border: solid green 1px;
-  
-     
-    }
-    .container-tractores{
-        border: solid yellow 1px;
-    }
-    .container-varios{
-        border: solid blue 1px;
-    }
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 25px;
+    border: var(--border-transparent);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    width: 90%;
+    padding: 45px;
+    box-shadow: 0px 0px 10px black;
 
     
-}
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 15px;
+      padding: 15px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0px 0px 5px black;
+      border: solid rgba(255, 255, 255, 0.229) 1px;
+
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      p {
+        align-self: flex-start;
+        font-size: 1.3em;
+      }
+    }
+
+    .camiones::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      background-image: url("../../assets/gallery-images/camionCargado.jpeg");
+      background-position: center;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      filter: blur(2px) brightness(40%);
+    }
+    .picadoras::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      background-image: url("../../assets/gallery-images/picadooras.jpeg");
+      background-position: center;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      filter: blur(2px) brightness(40%);
+    }
+    .tractores::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      background-image: url("../../assets/gallery-images/tractoor.jpeg");
+      background-position: center;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      filter: blur(2px) brightness(40%);
+    }
+    .varios::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      background-image: url("../../assets/gallery-images/picadoraCamion.jpeg");
+      background-position: center;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      filter: blur(2px) brightness(40%);
+    }
+  }
 }

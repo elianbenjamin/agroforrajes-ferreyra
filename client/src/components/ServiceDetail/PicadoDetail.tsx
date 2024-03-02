@@ -89,13 +89,6 @@ const PicadoDetail = () => {
         </p>
       </section>
 
-      {/* <section className={style["image-container"]}>
-        {images.map((img) => (
-          <div>
-            <img src={img} />
-          </div>
-        ))}
-      </section> */}
       <GallerySlider images={images}/>
 
       <a
