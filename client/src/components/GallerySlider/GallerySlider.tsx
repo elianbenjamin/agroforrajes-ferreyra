@@ -12,8 +12,6 @@ interface Props {
 const GallerySlider = ({ images }: Props) => {
   const [fullSizeImage, setFullSizeImage] = useState<null | string>(null);
 
-  
-
   const settings = {
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -56,9 +54,6 @@ const GallerySlider = ({ images }: Props) => {
         </Slider>
       </div>
 
-      {/* {fullSizeImage ? createPortal(<div className={style.fullSizeImage}>
-        
-      </div>, root) : null} */}
       {fullSizeImage ? <FullSizeImage /> : null}
     </>
   );
