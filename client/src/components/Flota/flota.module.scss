@@ -1,0 +1,53 @@
+@import "../../style/mixin.scss";
+
+.flota-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  
+
+  .nav-bar {
+    height: 100px;
+    padding-left: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: var(--border);
+    @include brown_blur;
+
+    .navBar-button {
+      @include navBar_button;
+    }
+  }
+  h1 {
+    align-self: center;
+    margin: 30px;
+    border-bottom: var(--border-transparent);
+  }
+
+.container-all{
+display: flex;
+flex-direction: row;
+
+    .container-truck{
+      border: solid red 1px;
+  
+     
+    }
+    .container-picadoras{
+      border: solid green 1px;
+  
+     
+    }
+    .container-tractores{
+        border: solid yellow 1px;
+    }
+    .container-varios{
+        border: solid blue 1px;
+    }
+
+    
+}
+}

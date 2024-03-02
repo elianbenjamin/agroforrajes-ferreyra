@@ -8,6 +8,7 @@ import ErrorPage from "./components/ErrorPage/ErrorPage";
 import Footer from "./components/Footer/Footer";
 import PicadoDetail from "./components/ServiceDetail/PicadoDetail";
 import SiembraDetail from "./components/ServiceDetail/SiembraDetail";
+import Flota from "./components/Flota/Flota";
 
 function App() {
   const { pathname } = useLocation();
@@ -30,6 +31,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/picado" element={<PicadoDetail />} />
         <Route path="/siembra" element={<SiembraDetail />} />
+        <Route path="/flota" element={<Flota/>}/>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 
