@@ -56,7 +56,6 @@
     padding: 45px;
     box-shadow: 0px 0px 10px black;
 
-    
     div {
       display: flex;
       flex-direction: column;
@@ -82,7 +81,7 @@
       content: "";
       position: absolute;
       top: 0;
-      background-image: url("../../assets/gallery-images/camionCargado.jpeg");
+      background-image: url("../../assets/gallery-images/ochocamiones.jpeg");
       background-position: center;
       height: 100%;
       width: 100%;
@@ -121,6 +120,241 @@
       width: 100%;
       z-index: -1;
       filter: blur(2px) brightness(40%);
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .flota-container {
+    .nav-bar {
+      height: 82.5px;
+      padding-left: 60px;
+    }
+    
+    section {
+      gap: 30px;
+
+      width: 90%;
+      padding: 25px;
+
+      div {
+        h2 {
+          margin-bottom: 15px;
+        }
+
+        p {
+          align-self: flex-start;
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1192px) {
+  .flota-container {
+    .nav-bar {
+      height: 75px;
+      padding-left: 60px;
+    }
+    h1 {
+      font-size: 1.8em;
+    }
+
+    section {
+    
+
+      div {
+        h2 {
+          margin-bottom: 15px;
+        }
+
+        p {
+          align-self: flex-start;
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1022px) {
+  .flota-container {
+    .nav-bar {
+      height: 70px;
+      padding-left: 60px;
+    }
+    h1 {
+      font-size: 1.7em;
+    }
+
+    section {
+      gap: 15px;
+      width: 96%;
+      padding: 10px;
+
+      div {
+        h2 {
+          margin-bottom: 15px;
+        }
+
+        p {
+          align-self: flex-start;
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 921px) {
+  .flota-container {
+    h1 {
+      font-size: 1.6em;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      width: 90%;
+      padding: 50px;
+
+      div {
+        h2 {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .flota-container {
+    .nav-bar {
+      height: 65px;
+      padding-left: 60px;
+    }
+    h1 {
+      font-size: 1.6em;
+    }
+
+    section {
+      gap: 25px;
+      width: 90%;
+      padding: 40px;
+
+      div {
+        h2 {
+          margin-bottom: 15px;
+        }
+
+        p {
+          align-self: flex-start;
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 562px) {
+  .flota-container {
+    .nav-bar {
+      height: 60px;
+    }
+    h1 {
+      font-size: 1.5em;
+      margin: 25px;
+    }
+
+    section {
+      gap: 25px;
+      width: 95%;
+      padding: 25px;
+
+      div {
+        p {
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 501px) {
+  .flota-container {
+    .nav-bar {
+      height: 55px;
+      padding-left: 50px;
+    }
+    h1 {
+      font-size: 1.5em;
+      margin: 25px;
+    }
+
+    section {
+      gap: 35px;
+
+      padding: 15px;
+
+      div {
+        h2 {
+          font-size: 1.4em;
+        }
+
+        p {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 438px) {
+  .flota-container {
+    .nav-bar {
+      padding-left: 40px;
+    }
+
+    section {
+      padding: 8px;
+
+      div {
+        h2 {
+          font-size: 1.3em;
+        }
+
+        p {
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 386px) {
+  .flota-container {
+    section {
+      padding: 5px;
+
+      div {
+        h2 {
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 326px) {
+  .flota-container {
+    section {
+      div {
+        h2 {
+          font-size: 1em;
+        }
+      }
     }
   }
 }

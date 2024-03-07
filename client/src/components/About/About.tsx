@@ -1,7 +1,5 @@
-import { useState } from "react";
 import styles from "./about.module.scss";
-import Equipment from "../Equipment/Equipment";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import {
   image1,
   image2,
@@ -29,12 +27,12 @@ const About = () => {
           satisfacer las necesidades del mercado.
         </p>
 
-<NavLink to={'/flota'} style={{color: 'white', textDecoration: 'none'}}>
-
-        <div className={styles["flota-button"]}>Nuestra flota</div>
-</NavLink>
-
-        
+        <NavLink
+          to={"/flota"}
+          style={{ color: "white", textDecoration: "none" }}
+        >
+          <div className={styles["flota-button"]}>Nuestra flota</div>
+        </NavLink>
       </section>
       <section className={styles["right-container"]}>
         <div>

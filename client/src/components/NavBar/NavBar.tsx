@@ -56,7 +56,7 @@ const NavBar = () => {
       >
         <section className={style["navBar-top"]}>
           <EmailIcon className={style["email-icon"]} />
-          <p> agroforrajesferreyra@gmail.com</p>
+          <a href="mailto:agroforrajesferreyra@gmail.com" style={{textDecoration: 'none', color: 'white'}}> <p>agroforrajesferreyra@gmail.com</p> </a>
 
           <div className={style["icons-container"]}>
             <a

@@ -38,8 +38,8 @@ const Flota = () => {
         </div>
         <div className={style.tractores}>
           <h2>Tractores y Otras maquinarias</h2>
-          <p>- John Deere 9410 de 375 hp, 25tn., espejo de 5 mts.</p>
-          <p>- John Deere 9320 de 375 hp, 25tn., espejo de 5 mts.</p>
+          <p>- John Deere 9410 de 375 hp, 25tn. Espejo de 5 mts.</p>
+          <p>- John Deere 9320 de 375 hp, 25tn. Espejo de 5 mts.</p>
           <p>- 9200 de 330 hp, 25tn., espejo de 5 mts.</p>
           <p>- Pauny 500 de 200 hp, con espejo de 4 mts.</p>
           <p>- 2 New Holland T7 245</p>

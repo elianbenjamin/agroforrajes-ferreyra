@@ -5,6 +5,7 @@ import About from "../../components/About/About";
 import ImageGallery from "../ImageGallery/Gallery";
 import { useEffect } from "react";
 import { scroller } from "react-scroll";
+import Video from "../../components/videobackground/Video";
 
 const Landing = () => {
   
@@ -21,6 +22,7 @@ const Landing = () => {
     <div className={style.Landing} id="landing">
       <Home />
       <Service />
+      <Video/>
       <About />
       <ImageGallery />
     </div>
