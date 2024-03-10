@@ -7,7 +7,8 @@ const Video = () => {
       <video src={video} autoPlay loop muted  />
       <div className={style['text']}>
 
-      <h1>CALIDAD ASEGURADA</h1>
+      {/* <p>CALIDAD ASEGURADA</p> */}
+      
 
       </div>
     </div>
