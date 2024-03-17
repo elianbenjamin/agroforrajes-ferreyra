@@ -14,14 +14,14 @@ interface Props {
 }
 
 const GallerySlider = ({ images }: Props) => {
-  // const [fullSizeImage, setFullSizeImage] = useState<null | string>(null);
   const navigate = useNavigate();
-  const { setImage } = useContext(
+  const { setImage, setPageId } = useContext(
     FullSizeImageContext
   ) as FullSizeImageContextType;
 
   const handleImageClick = (image: string) => {
     setImage(image);
+    setPageId('image-gallery');
     navigate("/fullsize-image");
   };
 
@@ -38,7 +38,7 @@ const GallerySlider = ({ images }: Props) => {
         },
       },
       {
-        breakpoint: 530,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -48,27 +48,23 @@ const GallerySlider = ({ images }: Props) => {
   };
 
   return (
-    <>
-      <div className={style.SliderContainer}>
-        <Slider className={style.Slider} {...settings}>
-          {images.map((img, i) => (
-            <div
-              className={style.imgContainer}
-              key={i}
-              onClick={() => {
-                handleImageClick(img);
-              }}
-            >
-              <div>
-                <img src={img} />
-              </div>
+    <div className={style.SliderContainer}>
+      <Slider className={style.Slider} {...settings}>
+        {images.map((img, i) => (
+          <div
+            className={style.imgContainer}
+            key={i}
+            onClick={() => {
+              handleImageClick(img);
+            }}
+          >
+            <div>
+              <img src={img} />
             </div>
-          ))}
-        </Slider>
-      </div>
-
-      {/* {fullSizeImage ? <FullSizeImage /> : null} */}
-    </>
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 };
 

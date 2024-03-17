@@ -1,5 +1,5 @@
 import styles from "./about.module.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
   image1,
   image2,
@@ -8,8 +8,26 @@ import {
   image5,
   image6,
 } from "../../assets/gallery-images/export";
+import { useContext } from "react";
+import {
+  FullSizeImageContext,
+  FullSizeImageContextType,
+} from "../../FullSizeImageContext";
 
 const About = () => {
+  const navigate = useNavigate();
+  const { setImage, setPageId } = useContext(
+    FullSizeImageContext
+  ) as FullSizeImageContextType;
+
+  const handleImageClick = (image: string) => {
+    setImage(image);
+    setPageId('about');
+    navigate("/fullsize-image");
+  };
+
+  const images = [image1, image2, image3, image4, image5, image6];
+
   return (
     <div className={styles.About} id="about">
       <section className={styles["left-container"]}>
@@ -35,24 +53,11 @@ const About = () => {
         </NavLink>
       </section>
       <section className={styles["right-container"]}>
-        <div>
-          <img src={image1} />
-        </div>
-        <div>
-          <img src={image2} />
-        </div>
-        <div>
-          <img src={image3} />
-        </div>
-        <div>
-          <img src={image4} />
-        </div>
-        <div>
-          <img src={image5} />
-        </div>
-        <div>
-          <img src={image6} />
-        </div>
+        {images.map((img, i) => (
+          <div onClick={() => handleImageClick(img)} key={i}>
+            <img src={img} />
+          </div>
+        ))}
       </section>
     </div>
   );

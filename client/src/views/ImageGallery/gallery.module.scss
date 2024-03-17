@@ -8,15 +8,14 @@
   width: 100vw;
   padding-top: 90px;
   position: relative;
-  gap: 70px;
+  gap: 45px;
 
   &::after {
     content: "";
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     top: 0;
-    left: 0;
     background-image: url("../../assets/gallery-images/picadoraCamion.jpeg");
     background-size: cover;
     background-position: center;
@@ -24,12 +23,11 @@
   }
   &::before {
     content: "";
+    @include background_opacity();
     position: absolute;
     top: 0;
-    left: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
-    @include background_opacity();
     z-index: -1;
   }
 }
@@ -153,6 +151,7 @@
         padding: 10px;
       }
     }
+
     .content {
       .buttons-container {
         .button {
