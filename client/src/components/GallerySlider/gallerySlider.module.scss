@@ -9,6 +9,8 @@
   align-items: center;
   border: var(--border-transparent);
   backdrop-filter: blur(10px);
+  flex: 1;
+  padding: 50px;
 
   .Slider {
     width: 90%;
@@ -86,7 +88,7 @@
     .Slider {
 
       .imgContainer {
-        height: 350px;
+        height: 380px;
 
         div {
           width: 250px;
@@ -96,31 +98,14 @@
   }
 }
 
-// @media screen and (max-width: 735px) {
-//   .SliderContainer {
-
-//     .Slider {
-//       width: 93%;
-
-//       .imgContainer {
-
-//         div {
-//           width: 100%;
-//         }
-//       }
-//     }
-//   }
-// }
-
 @media screen and (max-width: 600px) {
   .SliderContainer {
-    height: 350px;
 
     .Slider {
       width: 90%;
 
       .imgContainer {
-        height: 300px;
+        height: 370px;
 
         div {
           width: 222px;

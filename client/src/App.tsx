@@ -9,20 +9,20 @@ import Footer from "./components/Footer/Footer";
 import PicadoDetail from "./components/ServiceDetail/PicadoDetail";
 import SiembraDetail from "./components/ServiceDetail/SiembraDetail";
 import Flota from "./components/Flota/Flota";
+import FullSizeImage from "./components/FullSizeImage/FullSizeImage";
 
 function App() {
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    setTimeout(() => {
-      scroller.scrollTo("home", {
-        duration: 400,
-        delay: 0,
-        smooth: "easeInOutQuart",
-      });
-    }, 1000);
-  }, []);
-
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     scroller.scrollTo("home", {
+  //       duration: 400,
+  //       delay: 0,
+  //       smooth: "easeInOutQuart",
+  //     });
+  //   }, 1000);
+  // }, []);
 
   return (
     <div className="App" id="app">
@@ -31,11 +31,13 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/picado" element={<PicadoDetail />} />
         <Route path="/siembra" element={<SiembraDetail />} />
-        <Route path="/flota" element={<Flota/>}/>
+        <Route path="/flota" element={<Flota />} />
         <Route path="*" element={<ErrorPage />} />
+
+        <Route path="/fullsize-image" element={<FullSizeImage />} />
       </Routes>
 
-      <Footer />
+      {pathname !== "/fullsize-image" && <Footer />}
     </div>
   );
 }

@@ -2,15 +2,28 @@ import style from "./gallerySlider.module.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useState } from "react";
-import FullSizeImage from "../FullSizeImage/FullSizeImage";
+import { useContext } from "react";
+import {
+  FullSizeImageContext,
+  FullSizeImageContextType,
+} from "../../FullSizeImageContext";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   images: string[];
 }
 
 const GallerySlider = ({ images }: Props) => {
-  const [fullSizeImage, setFullSizeImage] = useState<null | string>(null);
+  // const [fullSizeImage, setFullSizeImage] = useState<null | string>(null);
+  const navigate = useNavigate();
+  const { setImage } = useContext(
+    FullSizeImageContext
+  ) as FullSizeImageContextType;
+
+  const handleImageClick = (image: string) => {
+    setImage(image);
+    navigate("/fullsize-image");
+  };
 
   const settings = {
     slidesToShow: 3,
@@ -28,9 +41,9 @@ const GallerySlider = ({ images }: Props) => {
         breakpoint: 530,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
+          slidesToScroll: 1,
+        },
+      },
     ],
   };
 
@@ -43,7 +56,7 @@ const GallerySlider = ({ images }: Props) => {
               className={style.imgContainer}
               key={i}
               onClick={() => {
-                setFullSizeImage(img);
+                handleImageClick(img);
               }}
             >
               <div>
@@ -54,7 +67,7 @@ const GallerySlider = ({ images }: Props) => {
         </Slider>
       </div>
 
-      {fullSizeImage ? <FullSizeImage /> : null}
+      {/* {fullSizeImage ? <FullSizeImage /> : null} */}
     </>
   );
 };

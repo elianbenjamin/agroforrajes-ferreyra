@@ -1,13 +1,25 @@
-import { createPortal } from 'react-dom';
-import style from './fullSizeImage.module.scss';
-
+import style from "./fullSizeImage.module.scss";
+import { useContext } from "react";
+import { NavLink } from "react-router-dom";
+import { FullSizeImageContext, FullSizeImageContextType } from "../../FullSizeImageContext";
 
 const FullSizeImage = () => {
-  const root: Element = document.querySelector('#root') as Element;
-  
-  return createPortal(<div className={style.fullSizeImage}>
+  const { image } = useContext(
+    FullSizeImageContext
+  ) as FullSizeImageContextType;
 
-  </div>, root)
-}
+  return (
+    <div className={style.container}>
+      <nav>
+        <NavLink to={"/"} className={style["navBar-button"]}>
+          ATRAS
+        </NavLink>
+      </nav>
+      <div>
+        <img src={image} />
+      </div>
+    </div>
+  );
+};
 
 export default FullSizeImage;
