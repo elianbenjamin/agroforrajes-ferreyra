@@ -29,10 +29,7 @@ const Service = () => {
           </div>
 
           <p className={styles["service-text"]}>
-            La siembra de precisión de grano grueso utiliza tecnologías
-            avanzadas para personalizar y optimizar el proceso de siembra,
-            mejorando la eficiencia y maximizando el rendimiento de los cultivos
-            de grano grueso en la agricultura moderna.
+          Proceso importante para la conservación y uso de los alimentos. El objetivo principal es cortar y procesar los forrajes frescos en pequeñas piezas para evitar la putrefacción y permitir su almacenamiento y uso en el futuro.
           </p>
         </NavLink>
       </div>

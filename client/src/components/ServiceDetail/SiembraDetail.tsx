@@ -53,7 +53,7 @@ export const SiembraDetail = () => {
 
       <section className={style.text}>
         <p>
-          En Agroforrajes Ferreyra, somos pioneros en la tecnología de siembra
+          En Agroforrajes Ferreyra, estamos a la vanguardia en la tecnología de siembra
           de precisión para granos gruesos. Nuestro enfoque innovador y nuestra
           dedicación a la excelencia agrícola nos ha convertido en líderes en la
           implementación de prácticas de siembra avanzadas.
@@ -61,7 +61,7 @@ export const SiembraDetail = () => {
         <p>
           Nuestros servicios de siembra de precisión de grano grueso están
           diseñados para optimizar la productividad de tus cultivos, maximizando
-          el rendimiento y minimizando el desperdicio. Utilizando tecnologías de
+          el rendimiento y minimizando el gasto. Utilizando tecnologías de
           vanguardia y equipos especializados, garantizamos una siembra precisa
           y uniforme en cada etapa del proceso.
         </p>
@@ -71,7 +71,8 @@ export const SiembraDetail = () => {
           Nuestro equipo altamente capacitado y nuestros sistemas de monitoreo
           avanzados nos permiten adaptar nuestras técnicas de siembra a las
           condiciones específicas de tu terreno, maximizando el potencial de tus
-          cultivos.
+          cultivos y minimizando los costos.
+
         </p>
         <p>
           Además, nos comprometemos a proporcionar un servicio integral que
@@ -87,6 +88,7 @@ export const SiembraDetail = () => {
           la rentabilidad de tu operación agrícola. Estamos comprometidos
           contigo en la búsqueda de mejoras continuas y resultados
           excepcionales.
+          La logística del fertilizante esta a cargo nuestro de llevarlo en bateas, esta incluido en la siembra para agilizar tiempos.
         </p>
       </section>
 

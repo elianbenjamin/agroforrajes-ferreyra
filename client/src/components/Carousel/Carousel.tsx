@@ -1,6 +1,6 @@
 import styles from "./Carousel.module.scss";
 import { useEffect, useState } from "react";
-import image1 from "../../assets/carousel-images/backgroundImage.jpg";
+import image1 from "../../assets/carousel-images/IMG-20190403-WA0064.jpg";
 import image2 from "../../assets/carousel-images/dosPicadoras.jpeg";
 import image3 from "../../assets/carousel-images/picadoAmanecer.jpeg";
 import image4 from "../../assets/carousel-images/tractor.jpeg";

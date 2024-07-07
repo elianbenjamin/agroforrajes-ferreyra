@@ -25,7 +25,7 @@ const Home = () => {
         <hr />
         <h1>AGROFORRAJES FERREYRA </h1>
         <hr />
-        <h2>Calidad Asegurada</h2>
+        <h2>Compromiso y Responsabilidad</h2>
       </div> 
 
       <a

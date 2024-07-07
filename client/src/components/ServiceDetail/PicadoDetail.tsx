@@ -68,8 +68,7 @@ const PicadoDetail = () => {
           necesidades específicas de cada cliente.
         </p>
         <p>
-          Desde la recolección del forraje hasta la entrega en tu localidad, nos
-          encargamos de cada paso del proceso para garantizar que recibas un
+        Nos encargamos de cada paso del proceso para garantizar que recibas un
           producto de la más alta calidad. Nuestra experiencia en el sector nos
           permite ofrecer asesoramiento experto para ayudarte a optimizar el
           rendimiento de tus cultivos y la nutrición de tu ganado.
